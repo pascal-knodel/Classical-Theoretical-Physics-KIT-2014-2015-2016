@@ -1,0 +1,312 @@
+% !TeX encoding = UTF-8
+
+
+\chapter*{Präsenzübung 4}
+\addcontentsline{toc}{chapter}{3}
+
+
+\newpage
+
+\underline{Fragen zu den Aufgaben oder Allgemeinem:}
+
+~\\
+
+\begin{enumerate}
+	
+	\item Ist eine Integration über ~ $0$ ~ von der Integrationsvariable unabhängig, d.h. ~ $ \int ~ 0 ~ $ ~ ist für alle Integrationsvariablen aus beliebigen Mengen definiert? Unter welcher Einschränkung gilt es? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & ...
+	\end{tabularx}
+	
+	~\\
+	
+	\item Wenn ~ $ \int ~ 0 ~ $ ~ nicht für alle Integrationsvariablen aus beliebigen Mengen definiert ist, unter welcher Einschränkung ist es definiert? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & ...
+	\end{tabularx}
+	
+	~\\Notizen: Das müsste stimmen, wenn der Quantor frei wird. Einfach Mal die Def. aufschreiben.
+	~\\
+	
+		
+	\item Gibt es eine einfache Merkhilfe für Hyperbolicus-Funktionen, wie z.B. ~ $cosh ~ \varphi$ ~ oder ~ $sinh ~ \varphi$ ~ ? \\
+		
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & ...
+	\end{tabularx}
+		
+	~\\
+	
+	\item Wie ist der $\nabla$-Operator ohne Pünktchen definiert? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & ...
+	\end{tabularx}
+	
+	~\\
+
+\end{enumerate}
+
+
+
+
+\newpage
+
+
+~\\
+
+
+\section*{Aufgabe 1}
+
+
+~\\
+
+
+\subsection*{1, a)}
+\addcontentsline{toc}{section}{1, a)}
+
+~\\
+
+Annahme: \qquad $\dot{\vec{r}}(t) ~ \in ~ \mathbb{R}^{ ~ n}$
+
+~\\
+
+\begin{align*}
+	\dot{\vec{r}}(t) ~~ = ~~ \left( \begin{array}{c} v_x \\ 0 \\ -gt \end{array} \right)
+\end{align*}
+
+~\\
+
+\begin{align*}
+	v(t) ~~ = ~~ \left| \dot{\vec{r}}(t) \right| ~~ = ~~ \sqrt{ v_x^2 ~ + ~ \left( -g ~ t \right)^2 } ~~ = ~~ \sqrt{ v_x^2 ~ + ~ g^2 ~ t^2 }
+\end{align*}
+
+~\\
+
+\begin{align*}
+\ddot{\vec{r}}(t) ~~ = ~~ \left( \begin{array}{c} 0 \\ 0 \\ -g \end{array} \right)
+\end{align*}
+
+~\\
+
+\begin{align*}
+a(t) ~~ = ~~ \left| \ddot{\vec{r}}(t) \right| ~~ = ~~ \sqrt{  \left( -g \right)^2 } ~~ = ~~ \sqrt{ g^2 } ~~ = ~~ \left| g \right|
+\end{align*}
+
+~\\
+~\\
+
+\subsection*{1, b)}
+\addcontentsline{toc}{section}{1, b)}
+
+~\\
+
+
+\begin{align*}
+	a(t) ~~ &= ~~ \ddt ~ \left| \dot{\vec{r}}(t) \right| \\ \\
+	&= ~~ \ddt ~ \sqrt{ \underbrace{ v_x^2 ~ + ~ g^2 ~ t^2 }_{=: ~ t'} } \\ \\
+	&= ~~ \frac{d}{d ~ t'} ~ ( ~ t' ~ )^{\frac{1}{2}} ~~ \ddt ~ \left( v_x^2 ~ + ~ g^2 ~ t^2 \right) \\ \\
+	&= ~~ \frac{1}{2} ~ ( ~ v_x^2 ~ + ~ g^2 ~ t^2 ~ )^{-\frac{1}{2}} ~~ g^2 ~ 2 ~ t \\ \\
+	&= ~~ \frac{g^2 ~ t}{\sqrt{v_x^2 ~ + ~ g^2 ~ t^2}}
+\end{align*}
+
+~\\
+
+\begin{align*}
+	\vec{a}_{\parallel}(t) ~~ &= ~~ \dot{\vec{r}} ~ \frac{a(t)}{v(t)}
+\end{align*}
+
+~\\
+
+\begin{align*}
+	\vec{a}_{\perp}(t) ~~ &= ~~ \ddot{\vec{r}}(t) ~ - ~ a_{\parallel}(t)
+\end{align*}
+
+~\\
+
+\begin{align*}
+\left| ~ \vec{a}_{\parallel}(t) ~ \right| ~~ &= ~~ \left| ~ \dot{\vec{r}} ~ \frac{a(t)}{v(t)} ~ \right|
+\end{align*}
+
+~\\
+
+\begin{align*}
+\left| ~ \vec{a}_{\perp}(t) ~ \right| ~~ &= ~~ \left| ~ \ddot{\vec{r}}(t) ~ - ~ a_{\parallel}(t) ~ \right|
+\end{align*}
+
+~\\
+
+\begin{align*} \setcounter{tc}{0}
+&\qquad \vec{a}_{\parallel}(t) ~ \cdot ~ \vec{a}_{\perp}(t) \\ \\
+&\eqs ~~ {\begin{cases} \quad f ~ := ~ \frac{g^2 ~ t}{\sqrt{v_x^2 ~ + ~ g^2 ~ t^2}} ~ \end{cases}} : \qquad \left( \begin{array}{c} v_x \\ 0 \\ -gt \end{array} \right) ~ f ~ \left( ~ \left( \begin{array}{c} 0 \\ 0 \\ -g \end{array} \right) ~ - ~ \left( \begin{array}{c} v_x \\ 0 \\ -gt \end{array} \right) ~ f ~ \right) \\ \\
+%
+&\eqs ~~ f ~ \left( g^2 ~ t ~ - ~ \underbrace{ \left( v_x^2 ~ + ~ g^2 ~ t^2 \right) ~ f}_{= ~ g^2 ~ t} \right) \\ \\
+&\eqs ~~ f ~ 0 \\ \\
+&\eqs ~~ 0
+\end{align*}
+
+
+~\\
+
+%Dieselbe Aufgabe wurde vor ? Jahren in LA gestellt, mit der dringenden Empfehlung,
+%Vektorberechnungen nur minimal und geschickt auszuführen, bis es sein muss und die Verträglichkeit bestimmter Operationen auszunutzen. Daran halte ich mich. Die Aufgabe ist korrekt gelöst. Das Berechnen, welches in der Aufgabe verlangt wird ist im puren funktionalen Sinn erfüllt.
+
+% Merkregel für Ableitung und Integral von cos/sin:
+%
+% cos: Vor der Integration lernen wir die Differentation. (zeitlich)
+%      Der Kosinusgraph steigt erst von der Achse ab,
+%      seine Ableitung ist der negative Sinus: -sin. (zeitlich)
+%      
+%
+% sin: Analog.
+%
+%
+%      
+% Wenn man sich jetzt noch ein Bildchen vom alten Graf Newton denkt, ... dann vergisst man das nie wieder.
+
+
+\newpage
+
+
+\section*{Aufgabe 1}
+
+\hfill
+
+\subsection*{2, a)}
+\addcontentsline{toc}{section}{2, a)}
+
+\hfill
+
+\begin{minipage}{0pt} \setcounter{tc}{0}
+	\begin{flalign*}
+	%
+	\quad \qquad & & \ddot{x} ~~ &= ~~ \omega ~ \dot{y} \\ \\
+	%
+	\im \qquad & & \idt ~ \ddt ~ \dot{x} ~~ &= ~~ \omega ~ \idt ~ \ddt ~ y \\ \\
+	%
+	\im \qquad & & \dot{x} ~ + ~ C_1 ~~ &= ~~ \omega ~ \left( ~ y ~ + ~ C_2 ~ \right) \qquad, ~~ C_1, ~ C_2 ~ \in ~ \mathbb{K} \\ \\
+	%
+	\im \qquad & & \dot{x} ~~ &= ~~ \omega ~ y ~ + ~ C_3 \qquad, ~~ C_3 ~ \in ~ \mathbb{K}
+	%
+	\end{flalign*}
+\end{minipage}
+
+~\\
+~\\
+
+\begin{minipage}{0pt} \setcounter{tc}{0}
+	\begin{flalign*}
+	%
+	\quad \qquad & & \ddot{y} ~~ &= ~~ -\omega ~ \dot{x} \\ \\
+	%
+	\im \qquad & & \dot{y} ~~ &= ~~ -\omega ~ x ~ + ~ C_3 \qquad, ~~ C_3 ~ \in ~ \mathbb{K}
+	%
+	\end{flalign*}
+\end{minipage}
+
+~\\
+
+\[ \tcbhighmath[boxrule=2pt]{ \int ~ 0 ~~ = ~~ C \qquad, ~~ C ~ \in ~ \mathbb{K} } \]
+
+\hfill
+
+\begin{minipage}{0pt} \setcounter{tc}{0}
+	\begin{flalign*}
+	%
+	\quad \qquad & & \ddot{z} ~~ &= ~~ 0 \\ \\
+	%
+	\im \qquad & & \idt ~ \ddt ~ \dot{z} ~~ &= ~~ \idt ~ 0 \\ \\
+	%
+	\im \qquad & & \dot{z} ~ + ~ C_1 ~~ &= ~~ C_2 \qquad, ~~ C_1, C_2 ~ \in ~ \mathbb{K} \\ \\
+	%
+	\im \qquad & & \dot{z} ~~ &= ~~ C_3 \qquad, ~~ C_3 ~ \in ~ \mathbb{K}
+	%
+	\end{flalign*}
+\end{minipage}
+
+
+
+
+\subsection*{2, b)}
+\addcontentsline{toc}{section}{2, b)}
+
+\hfill
+
+
+
+
+~\\
+~\\
+
+
+
+\newpage
+
+
+\section*{Aufgabe 3}
+
+\hfill
+
+\subsection*{3, a)}
+\addcontentsline{toc}{section}{2, c)}
+
+\hfill
+
+
+\[ \tcbhighmath[boxrule=2pt]{ cosh ~ \varphi ~~ = ~~ \frac{ e^{ ~ \varphi} ~ + ~ e^{ ~ -\varphi } }{2} } \]
+
+\[ \tcbhighmath[boxrule=2pt]{ sinh ~ \varphi ~~ = ~~ \frac{ e^{ ~ \varphi} ~ - ~ e^{ ~ -\varphi } }{2} } \]
+
+\hfill
+
+\begin{align*}
+	cosh ~ \varphi ~~ = ~~ \frac{ e^{ ~ \varphi} ~ + ~ e^{ ~ -\varphi } }{2}
+\end{align*}
+
+\begin{align*}
+	sinh ~ \varphi ~~ = ~~ \frac{ e^{ ~ \varphi} ~ - ~ e^{ ~ -\varphi } }{2}
+\end{align*}
+
+
+\newpage
+
+
+\subsection*{3, b)}
+\addcontentsline{toc}{section}{2, b)}
+
+\hfill
+
+%\[ \tcbhighmath[boxrule=2pt]{ \vec{\nabla} ~ f ~ a ~~ = ~~ \frac{\partial}{\partial ~ a_i} ~ f ~ a } \]
+
+\hfill
+
+
+
+\begin{align*}
+	\vec{\nabla} ~ \left| ~ \vec{r} ~ \right| ~~ &= ~~ \vec{\nabla} ~ \underbrace{ \sqrt{ ~ x^2 ~ + ~ y^2 ~ + ~ z^2 ~ } }_{=: ~ f} \\ \\
+	&= ~~ \left( \arraycolsep=1.4pt\def\arraystretch{1.3}\begin{array}{c} \px ~ f \\ \py ~ f \\ \pz ~ f \end{array} \right) \\ \\
+	&= ~~ \left( \begin{array}{c} \frac{1}{2} ~ \left( ~ x^2 ~ + ~ y^2 ~ + ~ z^2 ~ \right)^{ ~ -\frac{1}{2}} ~ 2 ~ x \\ ... \\ ... \end{array} \right) \\ \\
+	&= ~~ \left( \arraycolsep=1.4pt\def\arraystretch{1.3}\begin{array}{c} \frac{x}{f} \\ \frac{y}{f} \\ \frac{z}{f} \end{array} \right)
+\end{align*}
+
+% matlab
+%syms x y z
+%>> f = sqrt(x^2+y^2+z^2)
+%
+%f =
+%
+%(x^2 + y^2 + z^2)^(1/2)
+%
+%>> gradient(f, [x,y,z])
+%
+%ans =
+%
+%x/(x^2 + y^2 + z^2)^(1/2)
+%y/(x^2 + y^2 + z^2)^(1/2)
+%z/(x^2 + y^2 + z^2)^(1/2)
+
+
+
+

@@ -1,0 +1,788 @@
+% !TeX encoding = UTF-8
+
+
+
+\newpage
+
+
+
+\chapter{~}
+
+
+\underline{Fragen zu den Aufgaben oder Allgemeinem:}
+
+~\\
+
+\begin{enumerate}
+	
+	\item Was sind die Stammfunktionen von ~ $\frac{1}{x}$ ~ ? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & $\int ~ dy ~ \frac{1}{x} ~~ = ~~ ln ~ \left| x \right| ~ + ~ C \qquad, ~~ C ~ \in ~ \mathbb{K}$
+	\end{tabularx}
+	
+	~\\
+	
+	\item Welche Beziehung gilt bei genau einer beliebigen stetigen Funktion die keine Nullstellen hat zwischen Vorzeichen von (mindestens zwei) ihrer beliebigen Parametrisierungen? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & Sei ~ $\text{\underline{sf}}(x)$ ~ die beschriebene stetige Funktion und seien ~ $\text{\underline{sf}}\left(~ p_{~ i} ~\right)$ ~ Parametrisierungen mit ~ $i ~ \in ~ \{ i_1, ~ i_2 \} \subset ~ \mathbb{N}$ ~ . So gilt: \newline\newline ~ $sgn ~~ \text{\underline{sf}}\left(~ p_{~ i_1} ~\right) ~~ = ~~ sgn ~~ \text{\underline{sf}}\left(~ p_{~ i_2} ~\right)$ ~ .
+	\end{tabularx}
+	
+	~\\
+	
+	\item Was ist zu tun, wenn in der Aufgabe steht: ~ \textquotedblleft~\textit{Drücken Sie ~ $F_1$ ~ durch ~ $F_2$ ~ aus.}~\textquotedblright ~ ? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & Eine Gleichung ~ $... ~ F_2 ~ ... ~~ = ~~ ...$ ~ in die Form ~ $F_1 ~~ = ~~ ... ~ F_2 ~ ...$ ~ bringen.
+	\end{tabularx}
+	
+%	~\\
+%	
+%	\item Der Ausdruck ~ $ \int_{~ x_1}^{x_2} ~ dx ~ f(x)$ ~ ist gegeben. Wie sind hier alle Stammfunktionen von der inneren Funktion des unbestimmten Integrals ~ $f(x)$ ~ formalisierbar? \\
+%	
+%	\begin{tabularx}{0.88\textwidth}{lX}
+%		$\bullet$ & $ F(x) ~ + ~ C ~~ := ~~ \int ~dx ~ f(x) \qquad, ~~ C ~ \in ~ \mathbb{K} $ ~ . \newline Bestimmte und unbestimmte Integrale nicht verwechseln!
+%	\end{tabularx}
+	
+	
+	\newpage
+	
+	
+	\item Warum ist ~ $ln ~ \left| x \right|$ ~ die Stammfunktion von ~ $\frac{1}{x}$ ~ ? \\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & (TODO: Antwort)
+	\end{tabularx}
+	
+	
+	\newpage
+	
+	
+	\item Ist dieser Beweis richtig  ... ~\\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		Behauptung: & $F(x)$ ~ ist eine spezielle Lösung der Differentialgleichung ~ $\dydx ~ = ~ f(x) ~ y(x)$ ~ .
+	\end{tabularx}
+	 
+	~\\
+	~\\
+	
+	$ (*) ~ := ~ \begin{cases}
+	~ F(x) ~~ &:= ~~ \int_{x_0}^{x_1} ~ dx ~ f(x) \\ \\
+	~ y(x) ~~ &:= ~~ F(x)
+	\end{cases}$ \\
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	(*) ~ &\Rightarrow ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{y(x)} ~ \dydx ~~ = ~~ \int_{x_0}^{x_1} ~ dx ~ f(x) \\ \\
+	&\Leftrightarrow ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{F(x)} ~ \dFdx ~~ = ~~ F(x) \\ \\
+	&\Leftrightarrow ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{F(x)} ~ f(x) ~~ = ~~ F(x) \\ \\
+	&\Leftrightarrow ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{F(x)} ~ f(x) ~~ = ~~ \int_{x_0}^{x_1} ~ dx ~ f(x) \\ \\
+	&\Leftrightarrow ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{F(x)} ~ f(x) ~~ = ~~ \int_{x_0}^{x_1} ~ dx ~ 1 ~ f(x) \\ \\
+	&\Leftrightarrow ~~ \frac{1}{F(x)} ~~ = ~~ 1\\ \\
+	&\Leftrightarrow ~~ F(x) ~~ = ~~ 1 \\ \\
+	&\Leftrightarrow ~~ y(x) ~~ = ~~ 1
+	\end{aligned}$
+	
+	
+	\newpage
+	
+	
+	Probe: ~ $y(x) ~ = ~ 1$ ~ :
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ \ddx ~ y(x) ~~ = ~~ f(x) ~  y(x) \\ \\
+	&\Leftrightarrow ~~ \ddx ~ 1 ~~ = ~~ f(x) ~  1 \\ \\
+	&\Leftrightarrow ~~ 0 ~~ = ~~ f(x) \\ \\
+	&\Leftrightarrow ~~ wahr
+	\end{aligned}$
+	
+	~\\
+	~\\
+	
+	...?
+	
+	~\\
+	
+	\begin{tabularx}{0.88\textwidth}{lX}
+		$\bullet$ & (TODO: Antwort)
+	\end{tabularx}
+	
+	~\\
+
+%	\item ...
+	
+	
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+\section{~}
+
+~\\
+
+\begin{enumerate}[leftmargin=*, labelsep=2em, itemsep=3em, label=\alph*)]
+
+% a)
+
+	\item \hfill \break
+	
+	\begin{longtable}[l]{rl}
+		
+		Forderung:  &  Anwendung von partieller Integration. \\
+		
+		\\
+		
+		  Bekannt:  &  $\ddy ~ e^y ~ = ~ e^y$.
+		
+	\end{longtable}
+	
+	~\\ $\begin{aligned}[t]
+		I_0(x) ~~ &= ~~ \int_{0}^{x} ~ dy ~ y^0 ~ e^y \\ \\
+		&= ~~ \int_{0}^{x} ~ dy ~ 1 ~ e^y \\ \\
+		&= ~~ \int_{0}^{x} ~ dy ~ \underbrace{1}_{ \int } ~ \underbrace{ e^y }_{ \ddy } \\ \\
+		&= ~~ \left[ ~ 1 ~ \left( \ddy ~ e^y \right) ~ \right]_{0}^{x} ~ - ~ \int_{0}^{x} ~ dy ~ \left( \ddy ~ 1 \right) ~ e^y \\ \\
+		&= ~~ \left[ ~ e^y ~ \right]_{0}^{x} ~ - ~ \int_{0}^{x} ~ dy ~ 0 ~ e^y \\ \\
+		&= ~~ e^x ~ - ~ e^0 ~ - ~ \int_{0}^{x} ~ dy ~ 0 \\ \\
+		&= ~~ e^x ~ - ~ 1 ~ - ~ 0 \\ \\
+		&= ~~ e^x ~ - ~ 1 \\ \\
+	\end{aligned}$
+	
+	\newpage
+	
+
+% b)
+	
+	\item \hfill \break
+	
+	$I_n(x) ~ = ~ \int_{0}^{x} ~ dy ~ y^n ~ e^y ~~ \xLeftrightarrow{\text{~ Partielle Integration ~}} ~~ \int_{0}^{x} ~ dy ~ y^{ ~ n ~ - ~ 1} ~ e^y ~ = ~ I_{~ (n ~ - ~ 1)}(x)$
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	I_n(x) ~~ &= ~~ \int_{0}^{x} ~ dy ~ \underbrace{ y^n }_{ \int } ~ \underbrace{ e^y }_{ \ddy } \\ \\
+	&= ~~ \left[ y^n ~ \left( \ddy ~ e^y \right) \right]_{ 0 }^{ x } ~ - ~ \int_{0}^{x} ~ dy ~ \left( \ddy ~ y^n \right) ~ e^y \\ \\
+	&= ~~ \left[ ~ y^n ~ e^y ~ \right]_{ 0 }^{ x } ~ - ~ \int_{0}^{x} ~ dy ~ n ~ y^{ ~ n ~ - ~ 1} ~ e^y \\ \\
+	&= ~~ x^n ~ e^x ~ - ~ 0 ~ ... ~ - ~ n ~ \underbrace{ \int_{0}^{x} ~ dy ~ y^{ ~ n ~ - ~ 1} ~ e^y }_{ I_{~ (n ~ - ~ 1) ~}(x) } \\ \\
+	&= ~~ x^n ~ e^x ~ - ~ n ~ I_{~ (n ~ - ~ 1) ~}(x) \\ \\
+	\end{aligned}$ ~\\ 
+	
+% c)
+	
+	\item \hfill \break
+	
+	$\begin{aligned}[t]
+	I_1(x) ~~ &= ~~ x ~ e^x ~ - ~ 1 ~ I_{~ (1 ~ - ~ 1) ~}(x) \\ \\
+	&= ~~ x ~ e^x ~ - ~ I_{0}(x) \\ \\
+	&= ~~ x ~ e^x ~ - ~ I_{0}(x) \\ \\
+	&= ~~ x ~ e^x ~ - ~ \left( e^x ~ - ~ 1 \right) \\ \\
+	&= ~~ x ~ e^x ~ - ~ e^x ~ + ~ 1 \\ \\
+	&= ~~ \left( x ~ - 1 \right) ~ e^x ~ + ~ 1 \\ \\
+	\end{aligned}$
+	
+	\newpage
+	
+	$\begin{aligned}[t]
+	I_2(x) ~~ &= ~~ x^2 ~ e^x ~ - ~ 2 ~ I_{~ (2 ~ - ~ 1) ~}(x) \\ \\
+	&= ~~ x^2 ~ e^x ~ - ~ 2 ~ I_{1}(x) \\ \\
+	&= ~~ x^2 ~ e^x ~ - ~ 2 ~ \left( ~ \left( x ~ - 1 \right) ~ e^x ~ + ~ 1 ~ \right) \\ \\
+	&= ~~ x^2 ~ e^x ~ - ~ 2 ~  \left( x ~ - 1 \right) ~ e^x ~ - ~ 2 \\ \\
+	&= ~~ \left( ~ x^2 ~ - ~ 2 ~ \left( x ~ - 1 \right) ~ \right) ~ e^x ~ - ~ 2 \\ \\
+	&= ~~ \left( ~ x^2 ~ - ~ 2 ~ x ~ + 2 ~ \right) ~ e^x ~ - ~ 2 \\ \\
+	\end{aligned}$ \\
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	I_3(x) ~~ &= ~~ x^3 ~ e^x ~ - ~ 3 ~ I_{~ (3 ~ - ~ 1) ~}(x) \\ \\
+	&= ~~ x^3 ~ e^x ~ - ~ 3 ~ I_{2}(x) \\ \\
+	&= ~~ x^3 ~ e^x ~ - ~ 3 ~ \left( ~ \left( ~ x^2 ~ - ~ 2 ~ x ~ + 2 ~ \right) ~ e^x ~ - ~ 2 ~ \right) \\ \\
+	&= ~~ x^3 ~ e^x ~ - ~ 3 ~ \left( ~ x^2 ~ - ~ 2 ~ x ~ + 2 ~ \right) ~ e^x ~ + ~ 6 \\ \\
+	&= ~~ \left( ~ x^3 ~ - ~ 3 ~ \left( ~ x^2 ~ - ~ 2 ~ x ~ + 2 ~ \right) ~ \right) ~ e^x ~ + ~ 6 \\ \\
+	&= ~~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) ~ e^x ~ + ~ 6 \\ \\
+	\end{aligned}$
+	
+	
+	~\\
+	
+	\newpage
+	
+	\item Nach Aufgabe ~ c) ~ ist bereits ein Teilmuster: ~ $I_{n}(x) ~ = ~ ( ~ ... ~ ) ~ e^x ~ + ~ (-1)^{~ ...} ~ n!$ ~ zu vermuten. \\
+	
+\end{enumerate}
+
+	
+	~\\ Pochhammer-Symbol:
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	(a)_0 ~~ &:= ~~ 1 \\ \\
+	(a)_n ~~ &:= ~~ a ~ (a ~ + ~ 1) ~ (a ~ + ~ 2) ~ ... ~ (a ~ + ~ n ~ - ~ 1) \\ \\ \\
+	(a)_1 ~~ &~= ~~ a \\ \\
+	(a)_2 ~~ &~= ~~ a ~ (a ~ + ~ 1) \\ \\
+	(a)_3 ~~ &~= ~~ a ~ (a ~ + ~ 1) ~ (a ~ + ~ 2) \\ \\
+	(a)_4 ~~ &~= ~~ a ~ (a ~ + ~ 1) ~ (a ~ + ~ 2) ~ (a ~ + ~ 3) \\ \\
+	...
+	\end{aligned}$
+
+	~\\
+	
+	D.h. wir brauchen einen Index (z.B. von einem Summen-, Produkt- oder einem anderen -Zeichen mit Index). Stellt sich die Frage: Wie können wir ~ $I_n(x)$ ~ als Summe schreiben? Probieren wir die Beispiele ~ $I_0, ~ I_1, ~ I_2, ~ I_3$ ~ so zu schreiben, dass sich vielleicht ein Muster zeigt ...
+	
+	~\\
+	
+	\[ \left( ~ \sum_{k ~ = ~ 1}^{...} ~ ... ~ \right) ~ e^x ~ + ~ (-1)^{~ ...} ~ n! \]
+	
+	
+	\newpage	
+
+	$\begin{aligned}[t]
+	I_0(x) ~~ &= ~~ e^x ~ - ~ 1 \\ \\
+	&= ~~ \left( ~ 1 ~ x^0 ~ \right) ~ e^x ~ - ~ 1 \\ \\
+	&= ~~ \left( ~ (-0)_0 ~ x^{~ 1 - 1} ~ \right) ~ e^x ~ + ~ \left( -1 \right)^{~ 0 + 1} ~ 0!
+	\end{aligned}$
+	
+	~\\~\\
+	
+	$\begin{aligned}[t]
+	I_1(x) ~~ &= ~~ \left( ~ x ~ - 1 ~ \right) ~ e^x ~ + ~ 1 \\ \\
+	&= ~~ \left( ~ x^1 ~ - 1 ~ x^0 ~ \right) ~ e^x ~ + ~ \left( ~ 1 ~ \right) ~ 1 \\ \\
+	&= ~~ \left( ~ (-1)_0 ~ x^{~ 2 - 1} ~ + ~ (-1)_1 ~ x^{~ 1 - 1} ~ \right) ~ e^x ~ + ~ \left( -1 \right)^{~ 1 + 1} ~ 1!
+	\end{aligned}$
+	
+	~\\~\\
+	
+	$\begin{aligned}
+	I_2(x) ~~ &= ~~ \left( ~ x^2 ~ - ~ 2 ~ x ~ + 2 ~ \right) ~ e^x ~ - ~ 2 \\ \\
+	&= ~~ \left( ~ x^2 ~ - ~ 2 ~ x^1 ~ + 2 ~ x^0 ~ \right) ~ e^x ~ + ~ \left( ~ -1 ~ \right) ~ 2 \\ \\
+	&= ~~ \left( ~ (-2)_0 ~ x^{~ 3 - 1} ~ + ~ (-2)_1 ~ x^{~ 2 - 1} ~ + ~ (-2)_2 ~ x^{~ 1 - 1} ~ \right) ~ e^x ~ + ~ \left( -1 \right)^{~ 2 + 1} ~ 2!
+	\end{aligned}$
+	
+	~\\~\\
+	
+	$\begin{aligned}[t]
+	I_3(x) ~~ &= ~~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) ~ e^x ~ + ~ \left( ~ 1 ~ \right) ~ 6 \\ \\
+	&= ~~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x^1 ~ - 6 ~ x^0 ~ \right) ~ e^x ~ + ~ \left( ~ 1 ~ \right) ~ 6 \\ \\
+	&= ~~ \left( ~ (-3)_0 ~ x^{~ 4 - 1} ~ + ~ (-3)_1 ~ x^{~ 3 - 1} ~ + ~ (-3)_2 ~ x^{~ 2 - 1} ~ + ~ (-3)_3 ~ x^{~ 1 - 1} ~ \right) \\ \\
+	& ~~~~ \cdot ~ e^x ~ + ~ \left( -1 \right)^{~ 3 + 1} ~ 3!
+	\end{aligned}$
+	
+	~\\~\\
+	
+	$\begin{aligned}[t]
+	I_4(x) ~~ &= ~~ x^4 ~ e^{x} ~ - ~ 4 ~ I_{~ 4 - 1 ~}(x) \\ \\
+	&= ~~ x^4 ~ e^{x} ~ - ~ 4 ~ I_{3}(x) \\ \\
+	&= ~~ x^4 ~ e^{x} ~ - ~ 4 ~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) \\ \\
+	&= ~~ x^4 ~ e^{x} ~ - ~ 4 ~ \left( ~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) ~ e^x ~ - ~ 6 ~ \right) \\ \\
+	&= ~~ x^4 ~ e^{x} ~ - ~ 4 ~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) ~ e^x ~ + ~ 24 \\ \\
+	&= ~~ \left( ~ x^4 ~ - ~ 4 ~ \left( ~ x^3 ~ - ~ 3 ~ x^2 ~ + ~ 6 ~ x ~ - 6 ~ \right) ~ \right) ~ e^x ~ + ~ 24 \\ \\
+	&= ~~ \left( ~ x^4 ~ - ~ 4 ~ x^3 ~- ~ 12 ~ x^2 ~ - ~ 24 ~ x ~ + 24 ~ \right) ~ e^x ~ + ~ 24 \\ \\
+	&= ~~ \left( ~ x^4 ~ - ~ 4 ~ x^3 ~- ~ 12 ~ x^2 ~ - ~ 24 ~ x^1 ~ + 24 ~ x^0 ~ \right) ~ e^x ~ + ~ 24
+	\end{aligned}$
+	
+	~\\
+	
+	\newpage
+	
+	Behauptung: \\
+	
+	\[ \forall n ~ \in ~ \mathbb{N}: ~~ I_{~ (n ~ - ~ 1) ~} (x) ~~ = ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^n ~ (n ~ - ~ 1)! \]
+	
+	~\\
+	~\\
+	
+	Beweis durch vollständige Induktion.
+	
+	~\\
+	
+	\begin{tabularx}{\textwidth}{rX}
+		
+		Hinweis:  & Ich werde den Beweis ohne Voraussetzungen führen. Denn, wer ihn oder die Eigenschaften des \textit{Pochhammer-Symbols} kennt, wird vielleicht \textit{tricksen}. \\
+		
+	\end{tabularx}
+	
+	~\\
+	~\\
+	
+	I.A.:
+	
+	~\\
+	
+$\begin{aligned}[t]
+	n ~ = ~ 1 ~ : \qquad &\textcolor{white}{=} ~~ I_{~ (1 ~ - ~ 1) ~} (x) \\ \\
+	&= ~~ I_0(x) \\ \\
+	&= ~~ e^x ~ - ~ 1 \\ \\
+	&\oset[1.5ex]{?}{=} ~~ e^x ~ \sum_{k ~ = ~ 1}^{1} ~ \left( ~ -1 ~ + ~ 1 ~ \right)_{(1 ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^1 ~ (1 ~ - ~ 1)! \\ \\
+	&= ~~ e^x ~ \left( ~ 0 ~ \right)_{(0)} ~ x^{~ 0} ~ - ~ 0! \\ \\
+	&= ~~ e^x ~ - ~ 1 \\ \\
+	&\square
+\end{aligned}$
+
+	\newpage
+	
+$\begin{aligned}[t]
+n ~ = ~ 2 ~ : \qquad &\textcolor{white}{=} ~~ I_{~ (2 ~ - ~ 1) ~} (x) \\ \\
+&= ~~ I_1(x) \\ \\
+&= ~~ \left( ~ - 1 ~ + ~ x ~ \right) ~ e^x ~ + ~ 1 \\ \\
+&\oset[1.5ex]{?}{=} ~~ e^x ~ \sum_{k ~ = ~ 1}^{2} ~ \left( ~ -2 ~ + ~ 1 ~ \right)_{(2 ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^2 ~ (2 ~ - ~ 1)! \\ \\
+&= ~~ e^x ~ \sum_{k ~ = ~ 1}^{2} ~ \left( ~ -1 ~ \right)_{(2 ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ 1! \\ \\
+&= ~~ e^x ~ \left( ~ \left( ~ -1 ~ \right)_{(2 ~ - ~ 1)} ~ x^{~ 1 ~ - ~ 1} ~ + ~ \left( ~ -1 ~ \right)_{(2 ~ - ~ 2)} ~ x^{~ 2 ~ - ~ 1} ~ \right) ~ + ~ 1  \\ \\
+&= ~~ e^x ~ \left( ~ \left( ~ -1 ~ \right)_{(1)} ~ x^{~ 0} ~ + ~ \left( ~ -1 ~ \right)_{(0)} ~ x^{~ 1} ~ \right) ~ + ~ 1  \\ \\
+&= ~~ e^x ~ \left( ~ -1 ~ + ~ x ~ \right) ~ + ~ 1  \\ \\
+&\square
+\end{aligned}$
+
+~\\
+~\\
+
+I.H.:
+
+\[ \exists n ~ \in ~ \mathbb{N}: ~~ I_{~ (n ~ - ~ 1) ~} (x) ~~ = ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^n ~ (n ~ - ~ 1)! \]
+		
+	\newpage
+	
+	I.S.: \setcounter{tc}{0}
+	
+\begin{flalign*}
+%
+% \im & & <left_expression> &= <right_expression>
+%
+& & I_{~ ( ~ (n ~ + ~ 1) ~ - ~ 1 ~ ) ~} (x) ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n ~ + ~ 1} ~ \left( ~ -(n ~ + ~ 1) ~ + ~ 1 ~ \right)_{( ~ (n ~ + ~ 1) ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ \left( ~ (n ~ + ~ 1) ~ - ~ 1 ~ \right)! \\ \\ \\
+%
+\im \quad & & I_n (x) ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n ~ + ~ 1} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & x^n ~ e^x ~ - ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n ~ + ~ 1} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n ~ + ~ 1} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ - ~ x^n ~ e^x ~ + ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\end{flalign*}
+
+
+\begin{flalign*}
+%
+% \im & & <left_expression> &= <right_expression>
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ (~ -(n ~ + ~ 1) ~)_{(~ n ~ + ~ 1 ~ -(n ~ + ~ 1) ~)} ~ + ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+& & & ~~~ ~ - ~ x^n ~ e^x ~ + ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ x^n ~ + ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+& & & ~~~ ~ - ~ x^n ~ e^x ~ + ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ x^n ~ + ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ - ~ x^n ~ e^x ~ + ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ n ~ I_{~ (n ~ - ~ 1) ~} (x) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n!
+%
+\end{flalign*}
+
+
+\begin{flalign*}
+%
+% \im & & <left_expression> &= <right_expression>
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ n ~ \left( ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^n ~ (n ~ - ~ 1)! ~ \right) \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^n ~ (n ~ - ~ 1)! ~ n \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1)^n ~ n! \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n! \\ \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} \\ \\
+& & & ~~~ ~ + ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ + ~ (-1) ~ (-1)^{~ (n ~ - ~ 1)} ~ n! \\ \\
+& & & ~~~ ~ + ~ (-1)^{~ (n ~ + ~ 1)} ~ n!
+%
+\end{flalign*}
+
+
+\begin{flalign*}
+%
+% \im & & <left_expression> &= <right_expression>
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ + ~ e^x ~ \sum_{k ~ = ~ 1}^{n} ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ + ~ \sum_{k ~ = ~ 1}^{n} ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ - ~ \sum_{k ~ = ~ 1}^{n} ~ \underbrace{(-n) ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)}}_{~ ? ~} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ - ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{(n ~ + ~ 1 ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%
+\im \quad & & 0 ~~ &= ~~ 0 \\ \\
+%
+%\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ + ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%
+%\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ x^{~ k ~ - ~ 1} ~ + ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%
+%\im \quad & & 0 ~~ &= ~~ e^x ~ \left( ~ \sum_{k ~ = ~ 1}^{n} ~ \underbrace{\left( ~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} ~ + ~ n ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~ \right)}_{ \uset[1.5ex]{?}{=} ~ 0} ~ x^{~ k ~ - ~ 1} ~ \right) \\ \\
+%%
+\end{flalign*}
+
+~\\
+
+Bemerkung: \setcounter{tc}{0}
+
+\begin{align*}
+	&~ \qquad (-n) ~ \left( ~ -n ~ + ~ 1 ~ \right)_{(n ~ - ~ k)} ~~ = ~~ \left( ~ -n ~ \right)_{( ~ n ~ + ~ 1 ~ - ~ k ~ )} \\ \\
+	&\eqv \qquad -n ~ \prod_{i ~ = ~ 0}^{n ~ - ~ k ~ - 1} ~ -n ~ + ~ 1 ~ + ~ i ~~ = ~~ \prod_{i ~ = ~ 0}^{n ~ - ~ k ~ - ~ 1 ~ + ~ 1 ~ = ~ n ~ - ~ k} ~ -n ~ + ~ i
+\end{align*}
+
+~\\
+
+$\blacksquare$
+
+~\\
+~\\
+
+Übrigens: Das Pochhammersymbol wird 0, sobald der Index vom Argument abhängt, diesen um mindestens 1 übersteigt und die Vorzeichen unterschiedlich sind, ist eine 0 im Produkt. Wenn es das noch nicht gibt, könnte man dazu Pochhammer-Null sagen.
+
+	
+	
+	\newpage
+	
+	~\\
+	~\\
+	
+	
+	\newpage
+	
+	%Nach unermüdlichen Lösungsangriffen:
+	
+	Notiz/Gedanken: Hier zeigt sich wieder einmal die Gefahr der Pünktchen- und Kurzschreibweisen. Vielleicht vom Aufgabensteller gut gemeint, oder frech (?) ist die Beschreibung des Pochhammer-Symbols.
+	Zunächst denkt man nicht weiter darüber nach, als sich in etwa Vorzustellen, wie die endlichen Produkte aussehen. Am Ende der Induktion bemerkt man, dass sich der Beweis nicht sauber lösen lässt, wenn man sich nicht eine saubere Definition des Pochhammer-Symbols überlegt und zeigt, dass die Differenz 0 ergibt. Man hat gar nichts von der Kurzschreibweise, da man im letzten Schritt genauso viel Zeit verbraucht darüber nachzudenken, wie wenn man gleich ein Produktzeichen eingeführt hätte! Im allgemeinen lohnen sich natürlich Kurzschreibweisen, nur hier in der Aufgabe eben nicht. Was ja auch Teil der Aufgabe gewesen sein kann.
+
+
+
+%	&= ~~ \left( ~ x ~ \left( ~ x^3 ~ - ~ 4 ~ x^2 ~- ~ 12 ~ x ~ - ~ 24 ~ \right) ~ + 24 ~ \right) ~ ... \\ \\
+%	&= ~~ \left( ~ x ~ \left( ~ x ~ \left( x^2 ~ - ~ 4 ~ x ~- ~ 12 ~ \right) ~ - ~ 24 ~ \right) ~ + 24 ~ \right) ~ ... \\ \\
+%	&= ~~ \left( ~ x ~ \left( ~ x ~ \left( ~ x ~ \left( x ~ - ~ 4 ~ \right) ~ - ~ 12 ~ \right) ~ - ~ 24 ~ \right) ~ + 24 ~ \right) ~ ... \\ \\
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+
+\newpage
+
+
+% 4
+
+\section{~}
+
+~\\
+
+\begin{enumerate}[leftmargin=*, labelsep=2em, itemsep=3em, label=\alph*)]
+
+
+% a)
+
+	\item $\begin{aligned}[t]
+	\int_{x_0}^{x_1} ~ dx ~ f(x) ~~ &= ~~ \int_{x_0}^{x_1} ~ dx ~ \frac{1}{y(x)} ~ \dydx \\ \\
+	&= ~~ {\begin{cases}
+		~ u ~ := ~ y(x) ~
+	\end{cases}} : \qquad \int_{x_0}^{x_1} ~ dx ~ \frac{1}{u} ~ \dudx \\ \\
+	&= ~~ {\begin{cases}
+		~ du ~ = ~  dx ~ \dudx ~
+	\end{cases}} : \qquad \int_{x_0}^{x_1} ~ du ~ \frac{1}{u} \\ \\
+	&= ~~ {\big[ ln ~ \left| ~ u ~ \right| \big]}_{y(x_0)}^{y(x_1)} \\ \\
+	&= ~~ ln ~ \left| ~ y(x_1) ~ \right| ~ - ~ ln ~ \left| ~ y(x_0) ~ \right| \\ \\
+	&= ~~ ln ~ \frac{ \left| ~ y(x_1) ~ \right| }{ \left| ~ y(x_0) ~ \right| } \qquad, ~~ \text{da ~} y(x_0) ~ \neq ~ 0 \\ \\
+	&= ~~ ln ~ \left| ~ \frac{ y(x_1) }{ y(x_0) } ~ \right| \\ \\
+	&= ~~ \begin{cases}
+		~ sgn ~~ y(x_0) ~ = ~ sgn ~~ y(x_1) ~
+	\end{cases} \Rightarrow \qquad ln ~ \frac{ y(x_1) }{ y(x_0) }  \\ \\
+	\end{aligned}$
+	
+	
+% b)
+	
+	\item 
+	
+	\setcounter{tc}{0}
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ \int_{x_0}^{x_1} ~ f(x) ~~ = ~~ ln ~ \frac{~ y \left( x_1 \right) ~}{~ y \left( x_0 \right) ~} \\ \\
+	&\im ~~ {F\left(x\right)|}_{x_0}^{x_1} ~~ = ~~ ln ~ \frac{~ y \left( x_1 \right) ~}{~ y \left( x_0 \right) ~} \\ \\
+	&\im ~~ F(x_1) ~ - ~ F(x_0) ~~ = ~~ ln ~ \frac{~ y \left( x_1 \right) ~}{~ y \left( x_0 \right) ~} \\ \\
+	&\im ~~ e^{~ F(x_1) ~ - ~ F(x_0)} ~~ = ~~ e^{ ~ ln ~ \frac{~ y \left( x_1 \right) ~}{~ y \left( x_0 \right) ~} } \\ \\
+	&\im ~~ e^{~ F(x_1) ~ - ~ F(x_0)} ~~ = ~~ \frac{~ y \left( x_1 \right) ~}{~ y \left( x_0 \right) ~} \\ \\
+	&\im ~~ y \left( x_0 \right) ~ e^{~ F(x_1) ~ - ~ F(x_0)} ~~ = ~~ y \left( x_1 \right) \\ \\
+	\end{aligned}$
+	
+	~\\
+	
+	\setcounter{tc}{0}
+	
+	\begin{longtable}[l]{l@{\hspace{3em}}l}
+		
+		\itc, \itc & Definition: bestimmtes Integral. \\ \\
+		\itc, \itc & Anwendung: Exponentialfunktion. \\ \\
+		\itc & $y \left( x_0 \right)$ ~ nach links. \\ \\
+		\itc & ...?
+		
+	\end{longtable}
+	
+	
+	\newpage
+	
+
+% c)
+
+	\item
+	
+	$y(x) ~ = ~ 0 \quad : ~~ \ddy ~ 0 ~ = ~ \lambda ~ x^{\alpha} ~ 0 ~~ \Rightarrow ~~ 0 ~ = ~ 0$
+	
+	~\\
+	
+	\setcounter{tc}{0}
+	
+	$\begin{aligned}[t]
+		&\textcolor{white}{\Leftrightarrow} ~~ \dydx ~~ = ~~ \lambda ~ x^{\alpha} ~ y(x) \\ \\
+		&\im ~~ {\begin{cases}
+			~ y(x) ~ \neq ~ 0 ~
+		\end{cases}} : \qquad \dydx ~ \frac{1}{y(x)} ~~ = ~~ \lambda ~ x^{\alpha} \\ \\
+		&\im ~~ \idx ~ \dydx ~ \frac{1}{y(x)} ~~ = ~~ \lambda ~ \idx ~ x^{\alpha} \\ \\
+		&\im ~~ {\begin{cases}
+			~ u ~ := ~ y(x) ~
+			\end{cases}} : \qquad \idx ~ \dudx ~ \frac{1}{u} ~~ = ~~ \lambda ~ \idx ~ x^{\alpha} \\ \\
+		&\im ~~ {\begin{cases}
+			~ du ~ = ~ dx ~ \dudx ~
+			\end{cases}} : \qquad \idu ~ \frac{1}{u} ~~ = ~~ \lambda ~ \idx ~ x^{\alpha} \\ \\
+		&\im ~~ ln ~ \left| ~ u ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~ \idx ~ x^{\alpha} \qquad, ~~ C_1 ~ \in ~ \mathbb{K} \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~ \idx ~ x^{\alpha} \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~ \left( \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ C_2 \right) \qquad, ~~ C_2 ~ \in ~ \mathbb{K} ~~, ~~ \alpha ~ \neq ~ -1 \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ \lambda ~ C_2 ~ - ~ C_1 \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(1)}(\lambda) ~ := ~ \lambda ~ C_2 ~ - ~ C_1 ~~ ~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ C_{(1)}(\lambda) \\ \\
+		&\im ~~ e^{~ ln ~ \left| ~ y(x) ~ \right|} ~~ = ~~ e^{\lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ C_{(1)}(\lambda) } \\ \\
+		&\im ~~ \left| ~ y(x) ~ \right| ~~ = ~~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ C_{(1)}(\lambda) }
+	\end{aligned}$
+	
+	
+	\newpage
+	
+	
+	$\begin{aligned}
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} ~ + ~ C_{(1)}(\lambda) } \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1}} ~ e^{C_{(1)}(\lambda) } \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(2)}(\lambda) ~ := ~ e^{ C_{(1)}(\lambda) } ~~ ~ \in ~ \mathbb{K} ~
+			\end{cases}} : \qquad y(x) ~~ = ~~ \pm ~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1}} ~ C_{(2)}(\lambda) \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ C_{(2)}(\lambda) ~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} } \\ \\ \\ % \\
+		&\im ~~ {\begin{cases}
+			~ \alpha ~ = ~ -1 ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~ \idx ~ \frac{1}{x} \\ \\
+		&\im ~~ {\begin{cases}
+		~ x ~ > ~ 0 ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~ \left( ~ ln ~ x ~ + ~ C_3 ~ \right) \qquad, ~~ C_3 ~ \in ~ \mathbb{K} \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \lambda ~  ~ ln ~ x ~ + ~ \lambda ~ C_3 \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ \lambda ~  ~ ln ~ x ~ + ~ \lambda ~ C_3 ~ - ~ C_1 \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(3)}(\lambda) ~ := ~ \lambda ~ C_3 ~ - ~ C_1 ~~ ~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ \lambda ~  ~ ln ~ x ~ + ~ C_{(3)}(\lambda) \\ \\
+		&\im ~~ e^{~ ln ~ \left| ~ y(x) ~ \right|} ~~ = ~~ e^{~ \lambda ~  ~ ln ~ x ~ + ~ C_{(3)}(\lambda)} \\ \\
+		&\im ~~ \left| ~ y(x) ~ \right| ~~ = ~~ e^{~ \lambda ~  ~ ln ~ x ~ + ~ C_{(3)}(\lambda)} \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \lambda ~  ~ ln ~ x ~ + ~ C_{(3)}(\lambda)} \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \lambda ~  ~ ln ~ x } ~ e^{~ C_{(3)}(\lambda) } \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ x^{~ \lambda } ~ e^{~ C_{(3)}(\lambda) } \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(4)}(\lambda) ~ := ~ e^{ ~ C_{(3)}(\lambda) } ~~ ~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad y(x) ~~ = ~~ \pm ~ x^{~ \lambda } ~ C_{(4)}(\lambda) \\ \\
+	\end{aligned}$
+	
+	\newpage
+	
+	$\begin{aligned}
+		&\im ~~ y(x) ~~ = ~~ \pm ~ C_{(4)}(\lambda) ~ x^{~ \lambda }
+	\end{aligned}$
+	
+	~\\	
+	~\\
+	
+	$\begin{aligned}
+		&\Rightarrow \qquad \dydx ~ = ~ \lambda ~ x^{\alpha} ~ y(x) \\ \\
+		&\Rightarrow ~~ {\begin{cases}
+			~ y \left( x \right) ~ \neq ~ 0 ~ : & y \left( x \right) ~ = {\begin{cases}
+				~ \alpha ~ \neq ~ 0 ~ : & \pm ~ C ~ e^{~ \lambda ~ \frac{x^{\alpha ~ + ~ 1}}{\alpha ~ + ~ 1} } \\ \\
+				~ \alpha ~ = ~ 0 ~ : & \pm ~ C ~ x^{~ \lambda }
+				\end{cases}} \\ \\
+			~ y \left( x \right) ~ = ~ 0
+		\end{cases}} \qquad, ~~ C ~ \in ~ \mathbb{K}
+	\end{aligned}$
+	
+	~\\
+	~\\
+	
+	Hinweis: Konstanten in Zukunft ohne Abhängigkeiten schreiben (unsauber, schneller, eigtl. will man ja auch nicht mehr, als auszudrücken, dass da eine Körperkonstante gewählt werden darf).
+	TODO: Gilt die Rückrichtung?
+	
+	(TODO: Proben)
+	
+	
+	~\\
+	~\\
+	
+	
+\setcounter{tc}{0}
+
+\begin{longtable}{l@{\hspace{3em}}l}
+	
+	\itc & Trennung der Variablen ~ $y(x)$ ~ und ~ $x$. \\ \\
+	\itc & ...
+	
+\end{longtable}
+
+~\\	
+~\\ Ich lasse hier ~ $\dydx$ ~ so stehen und schreibe nicht ~ $\dydx ~ = ~ \ddx ~ y(x)$ ~ aus. \\ Diese Kurzschreibweise lohnt sich. Gibt es Fälle, wo es nicht so ist?
+
+~\\	Um die Merkregel der Integral-Substitution gleich sehen zu können, ist es besser, beim Trennen der Symbole ~ $y$ ~ und ~ $x$ ~ den Ausdruck ~ $\dydx$ ~ neben ~ $dx$ ~ des Integrals für die später folgende Integration zu schreiben. Daher: Variable, hier ~ $\frac{1}{y(x)}$ ~ gleich von rechts dran multiplizieren. Stimmt das immer?
+
+~\\
+	
+	
+	
+	
+	\newpage
+	
+	
+	
+	
+	% d)
+	
+	\item
+
+	$y(x) ~ = ~ 0 \quad : ~~ \ddy ~ 0 ~ = ~ exp(\alpha ~ x) ~ 0 ~~ \Rightarrow ~~ 0 ~ = ~ 0$
+	
+	~\\
+
+	\setcounter{tc}{0}
+
+	$\begin{aligned}[t]
+		&\textcolor{white}{\Leftrightarrow} ~~ \dydx ~~ = ~~ exp(\alpha ~ x) ~ y(x) \\ \\
+		&\im ~~ {\begin{cases}
+			~ y(x) ~ \neq ~ 0 ~
+			\end{cases}} : \qquad ~ \dydx ~ \frac{1}{y(x)} ~~ = ~~ e^{~ \alpha ~ x} \\ \\
+		&\im ~~ \idx ~ \dydx ~ \frac{1}{y(x)} ~~ = ~~ \idx ~ e^{~ \alpha ~ x} \\ \\
+		&\im ~~ {\begin{cases}
+			~ u ~ := ~ y(x) ~
+			\end{cases}} : \qquad \idx ~ \dudx ~ \frac{1}{u} ~~ = ~~ \idx ~ e^{~ \alpha ~ x} \\ \\
+		&\im ~~ {\begin{cases}
+			~ du ~ = ~ dx ~ \dudx ~
+			\end{cases}} : \qquad \idu ~ \frac{1}{u} ~~ = ~~ \idx ~ e^{~ \alpha ~ x} \\ \\
+		&\im ~~ ln \left| ~ u ~ \right| ~ + ~ C_1 ~~ = ~~ \idx ~ e^{~ \alpha ~ x} \qquad, ~~ C_1 ~ \in ~ \mathbb{K} \\ \\
+		&\im ~~ { \begin{cases}
+			~ \alpha ~ \neq ~ 0 ~
+			\end{cases} } : \qquad ln \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~ \frac{C_2}{\alpha} \qquad, ~~ C_2 ~ \in ~ \mathbb{K} \\ \\
+		&\im ~~ ln \left| ~ y(x) ~ \right| ~~ = ~~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~ \frac{C_2}{\alpha} ~ - ~ C_1 \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(1)} \left( \alpha \right) ~ := ~ C_2 ~ - ~ C_1 ~~ \in ~ \mathbb{K} ~
+			\end{cases}} : \qquad ln \left| ~ y(x) ~ \right| ~~ = ~~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~ C_{(1)} \left( \alpha \right) \\ \\
+		&\im ~~ e^{~ ln \left| ~ y(x) ~ \right|} ~~ = ~~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~  C_{(1)} \left( \alpha \right)} \\ \\
+		&\im ~~ \left| ~ y(x) ~ \right| ~~ = ~~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~  C_{(1)} \left( \alpha \right)} \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } ~ + ~  C_{(1)} \left( \alpha \right)}
+	\end{aligned}$
+	
+	\newpage
+	
+	$\begin{aligned}[t]
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } } ~ e^{ ~ C_{(1)} \left( \alpha \right) } \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_{(2)} \left( \alpha \right) ~ := ~ e^{ C_{(1)} \left( \alpha \right) } ~~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad y(x) ~~ = ~~ \pm ~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } } ~ C_{(2)} \left( \alpha \right) \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~  C_{(2)} \left( \alpha \right) ~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } } \\ \\ \\ % Anderer Fall
+		&\im ~~ {\begin{cases}
+			~ \alpha ~ = ~ 0 ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ \idx ~ 1 \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~ + ~ C_1 ~~ = ~~ x ~ + ~ C_3 \qquad, ~~ C_3 ~ \in ~ \mathbb{K} \\ \\
+		&\im ~~ ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ x ~ + ~ C_3 ~ - ~ C_1 \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_4 ~ := ~ C_3 ~ - ~ C_1 ~~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad ln ~ \left| ~ y(x) ~ \right| ~~ = ~~ x ~ + ~ C_4 \\ \\
+		&\im ~~ e^{~ ln ~ \left| ~ y(x) ~ \right|} ~~ = ~~ e^{~ x ~ + ~ C_4} \\ \\
+		&\im ~~ \left| ~ y(x) ~ \right| ~~ = ~~ e^{~ x ~ + ~ C_4} \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ x ~ + ~ C_4} \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ e^{~ x} ~ e^{~ C_4} \\ \\
+		&\im ~~ {\begin{cases}
+			~ C_5 ~ := ~ e^{C_4} ~~ \in ~ \mathbb{K} ~
+		\end{cases}} : \qquad y(x) ~~ = ~~ \pm ~ e^{~ x} ~ C_5 \\ \\
+		&\im ~~ y(x) ~~ = ~~ \pm ~ C_5 ~ e^{~ x} \\ \\
+	\end{aligned}$
+	
+	\newpage
+	
+	
+	~\\	
+	~\\
+	
+	$\begin{aligned}
+	&\Rightarrow \qquad \dydx ~ = ~ e^{~ \alpha ~ x} ~ y(x) \\ \\
+	&\Rightarrow ~~ {\begin{cases}
+		~ y \left( x \right) ~ \neq ~ 0 ~ : & y \left( x \right) ~ = {\begin{cases}
+			~ \alpha ~ \neq ~ 0 ~ : & \pm ~ C ~ e^{~ \frac{ e^{~ \alpha ~ x} }{ \alpha } } \\ \\
+			~ \alpha ~ = ~ 0 ~ : & \pm ~ C ~ e^{~ x}
+			\end{cases}} \\ \\
+		~ y \left( x \right) ~ = ~ 0
+		\end{cases}} \qquad, ~~ C ~ \in ~ \mathbb{K}
+	\end{aligned}$
+	
+	\newpage
+	
+	\setcounter{tc}{0}
+	
+	\begin{longtable}{l@{\hspace{3em}}l}
+		
+		\itc & Trennung der Variablen ~ $y(x)$ ~ und ~ $x$. \\ \\
+		\itc & ... \\
+		
+	\end{longtable}
+	
+	~\\
+	~\\
+	
+	(TODO) Probe: ~ $y(x) ~ = ~ \pm ~ ...$ ~ :
+	
+	~\\
+	
+	$\begin{aligned}[t]
+		\ddx ~ y(x) ~~ ...
+	\end{aligned}$
+	
+	~\\
+	
+	Notiz: Es macht Sinn, Integrationskonstanten immer so lange wie möglich zu behalten? Ein Teil der Aufgabe(n) hat wohl eindringlich darauf abgezielt, daran zu erinnern, dass beim Integrieren auf Sonderfälle von gegebenen Parametern geachtet werden muss!
+	
+	
+	
+	
+
+\end{enumerate}
+
+
+
+
+
+

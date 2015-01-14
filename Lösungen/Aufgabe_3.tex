@@ -1,0 +1,263 @@
+% !TeX encoding = UTF-8
+
+
+
+\newpage
+
+
+
+\chapter{~}
+
+
+
+
+
+
+
+\section{~}
+
+~\\
+
+
+\begin{enumerate}[leftmargin=*, labelsep=2em, itemsep=3em, label=\alph*)]
+	
+	
+	% a)
+	
+	\setcounter{tc}{0}
+	
+	\item
+	
+	
+	Eine Ameise befindet sich zum Zeitpunkt ~ $t ~ = ~ 0$ ~ am Ort ~ $x_0 ~ \geq ~ 0$ ~ eines Gummibandes, das bei ~ $x ~ = ~ 0$ ~ eingespannt ist. Die Länge des Gummibandes ist ~ $L(t) ~ = ~ L_0 ~ + ~ v_G ~ t$ ~ , d.h. es wird mit der (konstanten) Geschwindigkeit ~ $v_G$ ~ gedehnt. Die Ameise läuft mit Geschwindigkeit ~ $v_A$ ~ auf das Ende des Gummibandes zu. Sonstige Parameter, wie z.B. die Lebensdauer der Ameise oder die Zerreißlänge des Gummibandes werden auf ~ $\infty$ ~ gesetzt. \\
+	
+	a) Verifizieren Sie, dass der im Intervall ~ $\left[ t, ~ t ~ + ~ dt \right]$ ~ zurückgelegte Weg der Ameise ~ $dx ~ = ~ v_A ~ dt ~ + ~ v_G ~ \frac{ x(t) }{ L(t) } ~ dt$ ~ ist. \\
+	Hinweis: Betrachten Sie ~ $r(t) ~ = ~ \frac{ x(t) }{ L(t) }$ ~ und drücken Sie ~ $\dot{r}$ ~ durch ~ $L_0, ~ v_G$ ~ und ~ $v_A$ ~ aus. \\
+	
+	b) Berechnen Sie ~ $r(t)$ ~. Achten Sie dabei auf die Anfangsbedingung ~ $r(0) ~ = ~ \frac{x_0}{L_0}$ ~. Geben Sie die Zeit ~ $T$ ~ an, zu der die Ameise den Endpunkt ~ $x ~ = ~ L$ ~ erreicht hat. \\
+	
+	c) ...
+	
+	
+	% --- FALSCH
+	% Das war Falsch: Aufgabe nicht verstanden! Habe das
+	% was gezeigt werden sollte eingesetzt und mich im Kreis gedreht!!!
+	% Spielchen: Hier kann x(t) oder v_G doch 0 werden, oder? Ja?
+%	$\begin{aligned}[t]
+%	\dot{r} ~~ &= ~~ \ddt ~ \frac{x(t)}{L(t)} \\ \\
+%	&= ~~ \frac{ \ddt ~ x(t) ~ L(t) ~ - ~ x(t) ~ \ddt ~ L(t) }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} ~ L(t) ~ - ~ x(t) ~ \ddt ~ \left( L_0 + v_G ~ t \right) }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} ~ L(t) ~ - ~ x(t) ~ v_G }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ x(t) ~ v_G }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ x(t) ~ v_G }{ x(t) ~ v_G } ~ \frac{ x(t) ~ v_G }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ 1 }{ x(t) ~ v_G } ~ \frac{ \left( x(t) ~ v_G \right)^{2} }{ L(t)^2 } \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ 1 }{ x(t) ~ v_G } ~ \left( \frac{  x(t) ~ v_G  }{ L(t) } \right)^{2} \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ 1 }{ x(t) ~ v_G } ~ \left( 0 ~ - ~ \frac{  x(t) ~ v_G  }{ L(t) } \right)^{2} \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ 1 }{ x(t) ~ v_G } ~ \left( - ~ \frac{dx}{dt} ~ + ~ \frac{dx}{dt} ~ - ~ \frac{  x(t) ~ v_G  }{ L(t) } \right)^{2} \\ \\
+%	&= ~~ \frac{ \dot{x} }{ L(t) } ~ - ~ \frac{ 1 }{ x(t) ~ v_G } ~ \left( - ~ \frac{dx}{dt} ~ + ~ v_A \right)^{2} \\ \\
+%	\end{aligned}$
+% --- ENDE FALSCH ---
+
+
+	~\\
+	~\\
+
+	$\begin{aligned}[t]
+	\dot{r} ~~ &= ~~ \ddt ~ \frac{x(t)}{L(t)} \\ \\
+	&= ~~ \frac{ \ddt ~ x(t) ~ L(t) ~ - ~ x(t) ~ \ddt ~ L(t) }{ L(t)^2 } \\ \\
+	&= ~~ \frac{ \dot{x} ~ L(t) ~ - ~ x(t) ~ \ddt ~ \left( L_0 + v_G ~ t \right) }{ L(t)^2 } \\ \\
+	&= ~~ \frac{ \dot{x} ~ L(t) ~ - ~ x(t) ~ v_G }{ L(t)^2 } \\ \\
+	\end{aligned}$
+	
+	~\\
+	
+	\setcounter{tc}{0}
+	
+\begin{minipage}{0pt} % LATEX Trick, Besserer Weg?
+\begin{flalign*}
+%
+% \im & & <left_expression> &= <right_expression>
+%
+\im \qquad & & \dot{r} ~ L(t)^2 ~~ &= ~~ \dot{x} ~ L(t) ~ - ~ x(t) ~ v_G \\ \\
+%
+\im \qquad & & \dot{r} ~ L(t)^2 ~ + ~ x(t) ~ v_G ~~ &= ~~ \dot{x} ~ L(t) \\ \\
+%
+\im \qquad & & \dot{r} ~ L(t) ~ + ~ \frac{ x(t) }{ L(t) } ~ v_G ~~ &= ~~ \dot{x} \\ \\
+%
+\im \qquad & & \dot{r} ~ L(t) ~ + ~ r(t) ~ v_G ~~ &= ~~ \dot{x} \\ \\
+%
+\im \qquad & & \dot{r} ~ L_0 ~ + ~ \dot{r} ~ v_G ~ t ~ + ~ r(t) ~ v_G ~~ &= ~~ \dot{x} &
+%
+\end{flalign*}
+\end{minipage}
+
+
+\end{enumerate}
+
+
+
+\newpage
+
+\section{~}
+
+
+
+~\\
+
+
+\begin{enumerate}[leftmargin=*, labelsep=2em, itemsep=3em, label=\alph*)]
+	
+	\item
+\end{enumerate} \setcounter{tc}{0}
+	
+	~\\ \begin{align*}
+	%
+	\frac{ 1 }{ \alpha ~ v ~ + ~ \beta ~ v^2 } ~~ &\eqs ~~ \frac{ 1 }{ \left( \alpha ~ + ~ \beta ~ v \right) ~ v } \\ \\
+	%
+	&\eqs ~~ \frac{ 1 }{ \left( \alpha ~ + ~ \beta ~ v \right) ~ v } \\ \\
+	%
+	&\eqs ~~ \frac{ 1 }{ \beta ~ \left( \frac{\alpha}{\beta} ~ + ~ v \right) ~ v } \qquad, ~~ \beta ~ \neq ~ 0  \\ \\
+	%
+	&\eqs ~~ \frac{ 1 }{ \beta ~ \left( ~ v ~ - ~ \left( -\frac{\alpha}{\beta} \right) ~ \right) ~ \left( v ~ - ~ 0 \right) }  \\ \\
+	%
+	\end{align*}
+	
+	\setcounter{tc}{0}
+	
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		%
+		\im \qquad & & \frac{ 1 }{ \beta ~ \left( ~ v ~ + ~ \frac{\alpha}{\beta} ~ \right) ~ v } ~~ &= ~~ \frac{ K_1 }{ v } ~ + ~ \frac{ K_2 }{ v ~ + ~ \frac{\alpha}{\beta} } \qquad, ~~ K_1, ~ K_2 ~ \in \mathbb{R} \\ \\
+		%
+		\im \qquad & & 1 ~~ &= ~~ K_1 ~ \beta ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ + ~ K_2 ~ \beta ~ v \\ \\
+		%
+		\end{flalign*}
+	\end{minipage}
+
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		\im \qquad & & ~~ {\left\{\begin{aligned} \setcounter{tct}{0}
+				%
+				~ & v ~ = ~ 0: \quad & & & 1 ~~ &= ~~ K_1 ~ \beta ~ \frac{\alpha}{\beta} ~ + ~ 0 \\ \\
+				~ & &\imt \qquad & & 1 ~~ &= ~~ K_1 ~ \alpha \\ \\
+				~ & &\imt \qquad & & {\begin{cases} \alpha ~ \neq ~\ 0 ~ \end{cases}} : \quad \frac{1}{\alpha} ~~ &= ~~ K_1
+				%
+			\end{aligned}\right.}  \\ \\
+		%
+		\end{flalign*}
+	\end{minipage}
+
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		\im \qquad & & ~~ {\left\{\begin{aligned} \setcounter{tct}{0}
+			%
+			~ & v ~ = ~ -\frac{\alpha}{\beta}: \quad & & & 1 ~~ &= ~~ 0 ~ + ~ K_2 ~ \beta ~ \left( -\frac{\alpha}{\beta} \right)  \\ \\
+			~ & &\imt \qquad & & 1 ~~ &= ~~ K_2 ~ \left( -\alpha \right) \\ \\
+			~ & &\imt \qquad & & {\begin{cases} \alpha ~ \neq ~\ 0 ~ \end{cases}} : \quad -\frac{1}{\alpha} ~~ &= ~~ K_2
+			%
+			\end{aligned}\right.}  \\ \\
+		%
+		\end{flalign*}
+	\end{minipage}
+
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		%
+		\im \qquad & & \frac{1}{\alpha ~ v ~ + ~ \beta ~ v^2} ~~ &= ~~ \frac{1}{\alpha} ~ \frac{1}{v} ~ - ~ \frac{1}{\alpha} ~ \frac{1}{v ~ + ~ \frac{\alpha}{\beta}} \\ \\
+		%
+		\im \qquad & & &= ~~ \frac{1}{\alpha ~ v} ~ - ~ \frac{1}{\alpha ~ \left(v ~ + ~ \frac{\alpha}{\beta} \right)} \\ \\ \\
+		%
+		\im \qquad & & &= ~~ {\begin{cases} \beta ~ = ~ 0 \end{cases}} : \quad \frac{1}{\alpha ~ v ~ + ~ \beta ~ v^2} ~~ = ~~ \frac{1}{\alpha ~ v}
+		%
+		\end{flalign*}
+	\end{minipage}
+	
+	~\\
+	~\\
+	
+	\newpage
+	
+	\underline{Probe:} \setcounter{tc}{0}
+	
+	~\\
+	
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		%
+		\im \qquad & & \frac{1}{\alpha ~ v ~ + ~ \beta ~ v^2} ~~ &= ~~ \frac{1}{\alpha ~ v} ~ - ~ \frac{1}{\alpha ~ \left(v ~ + ~ \frac{\alpha}{\beta} \right)} \\ \\
+		%
+		\end{flalign*}
+	\end{minipage}
+	
+	\begin{minipage}{0pt}
+		\begin{flalign*}
+		\im \qquad & & {\left\{
+		\begin{aligned}
+		& \quad HN ~ := ~ \left( \alpha ~ v ~ + ~ \beta ~ v^2 \right) ~ \alpha ~ v ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ : \\ \\
+		& {\begin{aligned}
+		%
+		& & \quad \frac{\alpha ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ v}{ HN } ~~ &= ~~ \frac{ \alpha ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ v }{ HN } ~ + ~ \frac{v ~ \left( \alpha ~ v ~ + ~ \beta ~ v^2 \right)}{HN} \\ \\
+		%
+		\quad \imt & & \quad 0 ~~ &= ~~ {\begin{aligned}[t]
+			& \alpha ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ v \\ \\
+			&+ ~ v ~ \left( \alpha ~ v ~ + ~ \beta ~ v^2 \right) \\ \\
+			&- ~ \alpha ~ \left( v ~ + ~ \frac{\alpha}{\beta} \right) ~ v
+			\end{aligned}} \\ \\
+		%
+		\quad \imt & & \quad  0 ~~ &= ~~ {\begin{aligned}[t]
+			& \alpha ~ v^2 ~ + ~ \frac{\alpha^2 ~ v}{\beta} ~ + ~ \beta ~ v^3 ~ + ~ \alpha^2 ~ v \\ \\
+			&- ~ \alpha^2 ~ v ~ - ~ \beta ~ v^3 \\ \\
+			&- ~ \alpha ~ v^2 ~ - ~ \frac{\alpha^2 ~ v}{\beta}
+			\end{aligned}} \\ \\
+		%
+		\quad \imt & & \quad  0 ~~ &= ~~ 0
+		%
+		\end{aligned}} \end{aligned} \right.}
+		%
+		\end{flalign*}
+	\end{minipage}
+
+%Notiz: Wenn der Grad des Zählers 0 ist und der Grad des Nenners 1, so steht die PBZ ja schon dort. Wenn man geschickt ist, kann man bei der Probe einen Term weglassen. Dieser kommt (wenn man nur bestimmte Umformungen durchführt, Welche?) dann am Ende raus. Hier würde man z.B.  $\frac{1}{\alpha ~ v ~ + ~ \beta ~ v^2} = - ~ \frac{1}{\alpha} ~ \frac{1}{v ~ + ~ \frac{\alpha}{\beta}}$ prüfen und $\frac{1}{\alpha ~ v}$ sollte rauskommen (Achtung, nur spezielle Umformungen). Hauptnenner HN (nicht ausgeschrieben).
+
+	\newpage
+	
+	
+	\begin{description}[leftmargin=*, labelsep=2em, itemsep=3em]
+	\item[b)]	
+	\end{description} \setcounter{tc}{0}
+	
+\begin{flalign*}
+	&\quad \qquad \dot{v} ~~ = ~~ -\alpha ~ v ~ - ~ \beta ~ v^2 \\ \\
+	&\im \qquad \dot{v} ~ \frac{1}{\alpha ~ v ~ + ~ \beta ~ v^2} ~~ = ~~ -1 \\ \\
+	&\im \qquad \dot{v} ~ \left( \frac{1}{\alpha ~ v} ~ - ~ \frac{1}{\alpha ~ \left(v ~ + ~ \frac{\alpha}{\beta} \right)} \right) ~~ = ~~ -1 \\ \\
+	&\im \qquad \dot{v} ~ \frac{1}{\alpha ~ v} ~ - ~ \dot{v} ~ \frac{1}{\alpha ~ \left(v ~ + ~ \frac{\alpha}{\beta} \right)} ~~ = ~~ -1 \\ \\
+	&\im \qquad \frac{1}{\alpha} ~\left( ~ \dot{v} ~ \frac{1}{v} ~ - ~ \dot{v} ~ \frac{1}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right) ~~ = ~~ -1 \\ \\
+	&\im \qquad \frac{1}{\alpha} ~\left( ~ \idt ~ \dot{v} ~ \frac{1}{v} ~ - ~ \idt ~ \dot{v} ~ \frac{1}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right) ~~ = ~~ \idt ~ (-1) \\ \\
+	&\im \qquad \frac{1}{\alpha} ~\left( ~ ln ~ \left| ~ v ~ \right| ~ + ~ C_1 ~ - ~ ln ~ \left| ~ v ~ + ~ \frac{\alpha}{\beta} ~ \right| ~ + ~ C_2 ~ \right) ~~ = ~~ -t ~ + ~ C_3 \\ \\
+	&\im \qquad \frac{1}{\alpha} ~\left( ~ ln ~ \left| ~ \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right| ~ + ~ C_4 ~ \right) ~~ = ~~ -t ~ + ~ C_3 \\ \\
+	&\im \qquad ln ~ \left| ~ \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right| ~ + ~ C_4 ~~ = ~~ - ~ \alpha ~ t ~ + ~ C_5 \\ \\
+	&\im \qquad ln ~ \left| ~ \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right| ~~ = ~~ - ~ \alpha ~ t ~ + ~ C_6 \\ \\
+	&\im \qquad e^{ln ~ \left| ~ \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right|} ~~ = ~~ e^{~ - ~ \alpha ~ t ~ + ~ C_6}
+\end{flalign*}
+
+\newpage
+
+\begin{flalign*}
+	&\im \qquad \left| ~ \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~ \right| ~~ = ~~ e^{~ - ~ \alpha ~ t ~ + ~ C_6} \\ \\
+	&\im \qquad \frac{v}{v ~ + ~ \frac{\alpha}{\beta}} ~~ = ~~ \pm ~ e^{~ - ~ \alpha ~ t ~ + ~ C_6} \\ \\
+\end{flalign*}
+
+~\\
+
+Weiter? Vermutlich habe ich mich verrechnet. Allerdings ist mir auch unklar, ab wann ich die Integrationskonstante und welche ich durch $v_0$ ersetzen soll (oder alle zusammenfassen und das Resultat ersetzen?). Wie weit vereinfachen? Ich würde es so machen: in dem Moment wo links $v(t)$ steht wird noch ersetzt und fertig. Wie ist das mit dem Zeichnen? Ich nehme an von Hand. Mit $e$ ist das eben nicht ganz so einfach. Wie darf ich runden (3?)? Ich könnte jetzt noch eine v-P-Division machen und bekäme 1 plus den Rest. Danach stört mich leider der Ausdruck mit t.
+
+Zudem ist mir der Lösungsansatz (Mitschrieb) unklar. Da in dieser nur ein Summand angegeben ist. Ich wollte diese Formel eigtl. verwenden.
+% Überlege Dir die allgemeine Form von \dot{v} ~ 1 / (z (v) )
+
+	\newpage
+	
+	\begin{description}[leftmargin=*, labelsep=2em, itemsep=3em]
+	\item[c)]	
+	\end{description} \setcounter{tc}{0}
+
+

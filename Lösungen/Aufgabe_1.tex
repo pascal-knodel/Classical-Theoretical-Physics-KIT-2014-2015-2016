@@ -1,0 +1,341 @@
+% !TeX encoding = UTF-8
+
+
+
+%\newpage
+
+
+\chapter{~}
+
+
+
+\newpage
+
+
+
+\section{~} % Differentiation
+
+~\\
+
+\begin{enumerate}[leftmargin=*, labelsep=3em, itemsep=3em, label=\alph*)]
+	
+	\item $\begin{aligned}[t]
+	 f'(x) ~~ &= ~~ \ddx ~ x^{\alpha} ~ sin ~ x \\ \\
+	 &= ~~ \left( \ddx ~ x^{\alpha} \right) ~ sin ~ x ~ + ~ x^{\alpha} ~ \left( \ddx ~ sin ~ x \right) \\ \\
+	 &= ~~ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ x ~ + ~ x^{\alpha} ~ cos ~ x
+	\end{aligned}$
+
+	\item $\begin{aligned}[t]
+	 f'(x) ~~ &= ~~ \ddx ~ sin ~ x^{\alpha} \\ \\
+	 &= ~~ \ddx ~ sin \left( x^{\alpha} \right) \\ \\
+	 &= ~~ \left( \frac{d}{d ~ \left( x^{\alpha}\right)} ~ sin ~ x^{\alpha} \right) ~ \left( \ddx ~ x^{\alpha} \right) \\ \\
+	 &= ~~ cos ~ x^{\alpha} ~ \alpha ~ x^{\alpha ~ - ~ 1}
+	\end{aligned}$
+	
+	\item $\begin{aligned}[t]
+	 f'(x) ~~ &= ~~ \ddx ~ sin^{\alpha} ~ x \\ \\
+	 &= ~~ \ddx ~ {\left( sin ~ x \right)}^{\alpha} \\ \\
+	 &= ~~ \left( \frac{d}{d \left( sin ~ x \right)} ~ {\left( sin ~ x \right)}^{\alpha} \right) ~ \left( \ddx ~ sin ~ x \right) \\ \\
+	 &= ~~ \alpha ~ {\left( sin ~ x \right)}^{\alpha ~ - ~ 1} ~ cos ~ x
+	\end{aligned}$
+	
+	\item $\begin{aligned}[t]
+	 f'(x) ~~ &= ~~ \ddx ~ x^{\alpha} ~ sin ~ \frac{1}{x} \\ \\
+	 &= ~~ \left( \ddx ~ x^{\alpha} \right) ~ sin ~ \frac{1}{x} ~ + ~ x^{\alpha} ~ \left( \ddx ~ sin ~ \frac{1}{x} \right) \\ \\
+	 &= ~~ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} ~ + ~ x^{\alpha} ~ \left( \left( \frac{d}{d ~ \left( sin ~ \frac{1}{x} \right)} ~ sin ~ \frac{1}{x} \right) ~ \left( \ddx ~ \frac{1}{x} \right) \right) \\ \\
+	 &= ~~ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} ~ + ~ x^{\alpha}  ~ cos ~ \frac{1}{x} ~ \left( \ddx ~ x^{-1} \right) \\ \\
+	 &= ~~ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} ~ + ~ x^{\alpha}  ~ cos ~ \frac{1}{x} ~ \left( -1 \right) ~ x^{-2}
+	\end{aligned}$
+	
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+Bestimmung der Grenzwerte aus Teilaufgabe ~ 1, d) ~ von ~ $f(x)$ ~ und ~ $f'(x) ~ = ~ \dfdx$ :\\
+
+\begin{description}[leftmargin=*, labelsep=3em, itemsep=3em]
+	
+	\item[\textnormal{d)}] $f(x) ~ = ~ x^{\alpha} ~ sin ~ \frac{1}{x}$ \hfill \break
+	
+	\[ \limz ~ \left[ x^{\alpha} ~ sin ~ \frac{1}{x} \right] ~~ \neq ~~ \limz ~ \left[ x^{\alpha} \right] ~ \limz ~ \left[ sin ~ \frac{1}{x} \right] ~~ = ~~ 0 ~ \limi ~ \left[ sin ~ x \right] ~~ = ~~ 0 ~ ? ~~ = ~~ ? \]
+	
+	~\\D.h., wir wissen noch nichts über den Grenzwert.
+	
+	~\\
+	
+	\textbf{Möglichkeit:} \qquad Abschätzen und danach einschlie{"s}en.
+	
+	~\\
+	
+	$\begin{aligned}
+	&\textcolor{white}{\Leftrightarrow} ~~ x^{\alpha} ~ sin ~ \frac{1}{x} ~ \in ~ \big[ ~ x^{\alpha} \cdot [-1, ~ 1] ~ \big] \\ \\
+	&\Leftrightarrow ~~ {-x}^{\alpha} ~ \leq ~ f(x) ~ \leq ~ x^{\alpha} \\ \\
+	&\Leftrightarrow ~~ \limz ~ \left[ {-x}^{\alpha} \right] ~ \leq ~ f(x) ~ \leq ~ \limz ~ \left[ x^{\alpha} \right] \\ \\
+	&\Leftrightarrow ~~ 0 ~ \leq ~ f(x) ~ \leq ~ 0 \\ \\
+	&\Leftrightarrow ~~ \limz ~ \left[ x^{\alpha} ~ sin ~ \frac{1}{x} \right] ~ = ~ 0
+	\end{aligned}$
+	
+	\item[\textnormal{d)}] $\dfdx ~ = ~ \limz ~ \left[ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} ~ - ~ x^{\alpha ~ - ~ 2}  ~ cos ~ \frac{1}{x} \right]$
+	
+	~\\
+	
+	$\begin{aligned}
+	&\textcolor{white}{=} \limz ~ \left[ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} ~ - ~ x^{\alpha ~ - ~ 2}  ~ cos ~ \frac{1}{x} \right] \\ \\
+	& ~~ \neq ~~ \limz ~ \left[ \alpha ~ x^{\alpha ~ - ~ 1} ~ sin ~ \frac{1}{x} \right] ~ - ~ \limz ~ \left[ x^{\alpha}  ~ cos ~ \frac{1}{x} ~  x^{-2} \right] \\ \\
+	& ~~ = ~~ 0 ~ - ~ \limz ~ \left[ x^{\alpha}  ~ cos ~ \frac{1}{x} ~  x^{-2} \right] \\ \\
+	& ~~ = ~~ - ~ \limz ~ \left[ x^{\alpha ~ - ~ 2}  ~ cos ~ \frac{1}{x} \right] \\ \\
+	& ~~ = ~~ {\begin{cases}
+		~ a > 2: \qquad & 0 \\ \\
+		~ a = 2: \qquad & \limz ~ cos ~ \frac{1}{x} ~ = ~ \limi ~ cos ~ x ~ = ~ ? \\ \\
+		~ ... 
+	\end{cases}}
+	\end{aligned}$\\
+	
+	~\\D.h., wir wissen auch hier noch nichts über den Grenzwert.
+
+	~\\
+	
+	\textbf{Möglichkeit:} \qquad Abschätzen und danach einschlie{"s}en.
+	
+	~\\
+	
+	$\begin{aligned}
+	\textcolor{white}{\Leftrightarrow} ~~ x^{\alpha ~ - ~ 1} ~ \left( a ~ sin ~ \frac{1}{x} ~ - ~ \frac{1}{x} ~ cos ~ \frac{1}{x} \right) ~ &\in ~ x^{\alpha ~ - ~ 1} ~ \big[ ~ a ~ \left[ -1, ~ 1 \right] ~ - ~ \frac{1}{x} ~ \left[ -1, ~ 1 \right] ~ \big] \\ \\
+	&\in ~~ x^{\alpha ~ - ~ 1} ~ \left[ ~ -a ~ - ~ \frac{1}{x}, ~ a ~ + ~ \frac{1}{x} ~ \right]
+	\end{aligned}$ \\
+	
+	~\\
+	
+	$\begin{aligned}
+	&\Leftrightarrow ~~ x^{\alpha ~ - ~ 1} ~ \left( -\alpha ~ - ~ \frac{1}{x} \right) ~ \leq ~ \dfdx ~ \leq ~ x^{\alpha ~ - ~ 1} ~ \left( \alpha ~ + ~ \frac{1}{x} \right) ~ \\ \\
+	&\Leftrightarrow ~~ -\alpha ~ x^{\alpha ~ - ~ 1} ~ - ~ x^{\alpha ~ - ~ 2} ~ \leq ~ \dfdx ~ \leq ~ \alpha ~ x^{\alpha ~ - ~ 1} ~ + ~ x^{\alpha ~ - ~ 2} \\ \\
+	&\Leftrightarrow ~~ \limz ~ \left[ -\alpha ~ x^{\alpha ~ - ~ 1} ~ - ~ x^{\alpha ~ - ~ 2} \right] \leq ~ \limz ~ \dfdx ~ \leq ~ \limz ~ \left[ \alpha ~ x^{\alpha ~ - ~ 1} ~ + ~ x^{\alpha ~ - ~ 2} \right] \\ \\
+	&\Leftrightarrow ~~ {\begin{cases}
+		~ a > 2: \qquad & \limz ~ \dfdx ~ = ~ 0 \\ \\
+		~ a = 2: \qquad & -1 ~ \leq \limz ~ \dfdx ~ \leq ~ 1 \\ \\
+		~ ... 
+	\end{cases}}
+	\end{aligned}$ \\
+	
+	~\\ D.h. wir wissen auch hier noch nichts über den Grenzwert für ~ $\alpha ~ \leq ~ 2$ ~ .
+	
+	~\\
+	~\\
+	
+	$\mdq{\text{\textit{Besser}}}$ abschätzen und noch Mal einschließen:
+	
+	~\\
+	
+	$\begin{aligned}
+	&\textcolor{white}{\Leftrightarrow} ~~ -\alpha ~ x^{\alpha ~ - ~ 1} ~ - ~ x^{\alpha ~ - ~ 2} ~ \leq ~ \dfdx ~ \leq ~ \alpha ~ x^{\alpha ~ - ~ 1} ~ + ~ x^{\alpha ~ - ~ 2} \\ \\
+	&\Rightarrow ~~ -\alpha ~ x^{\alpha ~ - ~ 1} ~ - ~ x^{\alpha} ~ \leq ~ \dfdx ~ \leq ~ \alpha ~ x^{\alpha ~ - ~ 1} ~ + ~ x^{\alpha} \\ \\
+	&\Leftrightarrow ~~ \limz ~ \left[ -\alpha ~ x^{\alpha ~ - ~ 1} ~ - ~ x^{\alpha} \right] \leq ~ \limz ~ \dfdx ~ \leq ~ \limz ~ \left[ \alpha ~ x^{\alpha ~ - ~ 1} ~ + ~ x^{\alpha} \right] \\ \\
+	&\Leftrightarrow ~~ 0 \leq ~ \limz ~ \dfdx ~ \leq ~ 0 \\ \\
+	&\Leftrightarrow ~~ \limz ~ \dfdx ~ = ~ 0
+	\end{aligned}$ \\
+	
+
+\end{description}
+
+
+
+\section{~}
+
+~\\
+
+
+\begin{enumerate}[leftmargin=*, labelsep=3em, itemsep=3em]
+	
+	\item $\begin{aligned}[t]
+	F(x) ~~ &= ~~ \idx ~ x^{\alpha} \\ \\
+	&= ~~ \frac{1}{\alpha ~ + ~ 1} ~ x^{\alpha ~ + ~ 1} ~ + ~ C \qquad, ~~ C ~ \in ~ \mathbb{K}
+	\end{aligned}$
+	
+	\item $\begin{aligned}[t]
+	F(x) ~~ &= ~~ \idx ~ \underbrace{x^2}_{:\int} ~ \underbrace{cos ~ x}_{:\ddx} \\ \\
+	&= ~~ x^2 ~ \idx ~ cos ~ x ~ - ~ \idx ~ \left( \ddx ~ x^2 \right) ~ \left( \idx ~ cos ~ x \right) \\ \\
+	&= ~~ x^2 ~ sin ~ x ~ - ~ 2 ~ \idx ~ \underbrace{x}_{:\int} ~ \underbrace{sin ~ x}_{:\ddx} \\ \\
+	&= ~~ x^2 ~ sin ~ x ~ - ~ 2 ~ \left( x ~ \idx ~ sin ~ x ~ - ~ \idx ~ \left( \ddx ~ x \right) ~ \left( \idx ~ sin ~ x \right) \right) \\ \\
+	&= ~~ x^2 ~ sin ~ x ~ - ~ 2 ~ \left( x ~ \left( - cos ~ x \right) ~ - ~ \idx ~ 1 ~ \left( - cos ~ x \right) \right) \\ \\
+	&= ~~ x^2 ~ sin ~ x ~ - ~ 2 ~ \left( - x ~ cos ~ x ~ + ~ sin ~ x \right)
+	\end{aligned}$
+
+\end{enumerate}
+	
+	
+
+\newpage
+	
+
+\begin{description}[leftmargin=*, labelsep=3em, itemsep=3em]
+	
+	\item[\textnormal{c) \quad i)}] \hfill
+	
+	~\\
+	
+	\setcounter{tc}{0}
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ L(x) ~ + ~ L(y) ~~ = ~~ L(xy) \\ \\
+	&\im \qquad \ddx ~ L(x) ~ + ~ \ddx ~ L(y) ~~ = ~~ \ddx ~ L(xy) \\ \\
+	&\im \qquad \frac{1}{x} ~ + ~ 0 ~~ = ~~ \left( \dd{(xy)} ~ L(xy) \right) ~ \left( \ddx ~ xy \right) \\ \\
+	&\im \qquad \frac{1}{x} ~~ = ~~ \frac{1}{xy} ~ 1 ~ y \\ \\
+	&\im \qquad \frac{1}{x} ~~ = ~~ \frac{1}{x} \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	~\\
+	
+	Dies zeigt die Äquivalenz. Um etwas direkter von ~ $L(x) ~ + ~ L(y)$ ~ nach ~ $L(xy)$ ~ (oder umgekehrt) zu kommen, hilft die in diesem Beweis verwendete Ableitungsregel in einer Gleichungskette ...
+	
+	~\\
+	~\\
+	
+	\newpage
+	
+	\textbf{Herleitung:}
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	L(x) ~ + ~ L(y) ~~ &= ~~ L(x) ~ + ~ C \qquad, ~~ C ~ = ~ L(y) ~ \in ~ \mathbb{K} \\ \\
+	&= ~~ \idx ~ \ddx ~ L(x) \\ \\
+	&= ~~ \idx ~ \frac{1}{x} \\ \\
+	&= ~~ \idx ~ \frac{1}{x} ~ 1 \\ \\
+	&= ~~ \idx ~ \frac{1}{x} ~ \frac{y}{y} \\ \\
+	&= ~~ \idx ~ \frac{1}{xy} ~ y \\ \\
+	&= ~~ \idx ~ \left( \dd{(xy)} ~ L(xy) \right) ~ \left( \ddx ~ xy \right) \\ \\
+	&= ~~ \idx ~ \ddx ~ L(xy) \\ \\
+	&= ~~ L(xy) ~ + ~ C \qquad, ~~ C ~ := ~ 0 ~ \in ~ \mathbb{K} \\ \\
+	&= ~~ L(xy) \\ \\
+	 &\blacksquare
+	\end{aligned}$ \\
+	
+	
+	\newpage
+	
+	
+	\item[\textnormal{c) \quad ii)}] \hfill
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ L(x^{\alpha}) ~~ = ~~ \alpha ~ L(x) \\ \\
+	&\Leftrightarrow ~~ \ddx ~ L(x^{\alpha}) ~~ = ~~ \ddx ~ \alpha ~ L(x) \\ \\
+	&\Leftrightarrow ~~ \dd{(x^{\alpha})} ~ L(x^{\alpha}) ~ \ddx ~ x^{\alpha} ~~ = ~~ \alpha ~ \ddx ~ L(x) \\ \\
+	&\Leftrightarrow ~~ \frac{1}{x^{\alpha}} ~ \alpha ~ x^{\alpha ~ - ~ 1} ~~ = ~~ \alpha ~\frac{1}{x} \\ \\
+	&\Leftrightarrow ~~ \alpha ~\frac{1}{x} ~~ = ~~ \alpha ~\frac{1}{x} \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	~\\
+	
+	Dies zeigt die Äquivalenz. Um etwas direkter von ~ $L(x^{\alpha})$ ~ nach ~ $\alpha ~ L(x)$ ~ (oder umgekehrt) zu kommen, hilft die in diesem Beweis verwendete Ableitungsregel in einer Gleichungskette ...
+	
+	~\\
+	~\\
+	
+	$\begin{aligned}[t]
+	L(x^{\alpha}) ~~ &= ~~ \idx ~ \ddx ~ L(x^{\alpha}) \\ \\
+	&= ~~ \idx ~ \dd{(x^{\alpha})} ~ L(x^{\alpha}) ~ \ddx ~ x^{\alpha} \\ \\
+	&= ~~ \idx ~ \frac{1}{x^{\alpha}} ~ \alpha ~ x^{\alpha ~ - ~ 1} \\ \\
+	&= ~~ \alpha ~ \idx ~ \frac{1}{x} \\ \\
+	&= ~~ \alpha ~ \idx ~ \ddx ~ L(x) \\ \\
+	&= ~~ \alpha ~ L(x) ~ + ~ C \qquad, ~~ C ~ := ~ 0 ~ \in ~ \mathbb{K} \\ \\
+	&= ~~ a ~ L(x) \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	
+	\newpage
+	
+	
+	\item[\textnormal{c) \quad iii)}] \hfill
+	
+	~\\
+	
+	Spielchen: \qquad Finde mindestens zwei Fehler in ...
+	
+	~\\
+	
+	\setcounter{tc}{0}
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ \frac{df^{-1}}{dy} ~~ = ~~ \frac{1}{\frac{df}{dy}} \\ \\
+	&\im ~~ \frac{df^{-1}}{dy} ~~ = ~~ \frac{1}{\ddy ~ f(x)} \\ \\
+	&\im ~~ \frac{df^{-1}}{dy} ~~ = ~~ \frac{1}{\ddy ~ y} \\ \\
+	&\im ~~ \ddy ~ f^{-1}(y) ~~ = ~~ 1 \\ \\
+	&\im ~~ \ddy ~ x ~~ = ~~ 1 \\ \\
+	&\im ~~ 0 ~~ = ~~ 1
+	\end{aligned}$ \\
+	
+	~\\	
+	
+	\underline{Fehler:} \\
+	
+	1. Gleichung falsch übernommen. \\
+	
+	2. In ~ $^{4}$ ~ sind ~ $x$ ~ und ~ $y$ ~ abhängig, ~ $y$ ~ ist ja als Funktion von ~ $x$ ~ definiert, ~ $y ~ = ~ f(x)$ ~ . Die Abhängigkeit hilft in einem richtigen Beweis ...
+	
+	~\\
+
+	\setcounter{tc}{0}
+	
+	$\begin{aligned}[t]
+	&\textcolor{white}{\Leftrightarrow} ~~ \frac{df^{-1}}{dy} ~~ = ~~ \frac{1}{ \frac{df}{dx} } \\ \\
+	&\im \qquad \ddy ~ f^-1(y) ~~ = ~~ \frac{1}{ \ddx ~ f(x) } \\ \\
+	&\im \qquad \left( \ddy ~ f^-1(y) \right) ~ \left( \ddx ~ f(x) \right) ~~ = ~~ 1 \\ \\
+	&\im \qquad \ddx ~ f^-1\left( ~ f(x) ~ \right) ~~ = ~~ 1 \\ \\
+	&\im \qquad \ddx ~ x ~~ = ~~ 1 \\ \\
+	&\im \qquad 1 ~~ = ~~ 1 \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	~\\
+	
+	Dies zeigt die Äquivalenz. Um etwas direkter von ~ $\frac{df^{-1}}{dy}$ ~ nach ~ $\frac{1}{ \frac{df}{dx} }$ ~ zu kommen, oder umgekehrt, hilft das neutrale Produkt und der neutrale Quotient ~ $1$ ~ , unter der gegebenen Bedingung, dass ~ $\dfdx ~ \neq ~ 0$ ~ ...
+	
+	
+	\newpage
+	
+	$\begin{aligned}[t]
+	\frac{df^{-1}}{dy} ~~ &= ~~ \ddy ~ f^{-1}(y) \\ \\
+	&= ~~ \ddy ~ f^{-1}(y) ~ 1 \\ \\
+	&= ~~ \left( \ddy ~ f^{-1}(y) \right) ~ \mathLarge{ \frac{ \underset{ \dfdx }{~} }{ \overset{ \dfdx }{~} } } \\ \\
+	&= ~~ \frac{ \left( \ddy ~ f^{-1}(y) \right) ~ \dfdx }{ \overset{ \dfdx }{~} } \\ \\
+	&= ~~ \frac{ \left( \ddy ~ f^{-1}(y) \right) ~ \left( \ddx ~ f(x) \right) }{ \overset{ \dfdx }{~} } \\ \\
+	&= ~~ \frac{ \ddx ~ f^{-1}\left( ~ f(x) ~ \right) }{ \overset{ \dfdx }{~} } \\ \\
+	&= ~~ \frac{ \ddx ~ x }{ \overset{ \dfdx }{~} } \\ \\
+	&= ~~ \frac{ 1 }{ \overset{ \dfdx }{~} } \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	
+	\newpage
+	
+	
+	\item[\textnormal{c) \quad iv)}] \hfill
+	
+	~\\
+	
+	$\begin{aligned}[t]
+	\frac{dL^{-1}}{dy} ~~ &= ~~ \frac{1}{ \frac{dL}{dx} } \\ \\
+	&= ~~ \frac{1}{ \frac{1}{x} } \\ \\
+	&= ~~ x \\ \\
+	&= ~~ L^{-1}\left( ~ L(x) ~ \right) \\ \\
+	&= ~~ L^{-1}(y) \\ \\
+	&\blacksquare
+	\end{aligned}$ \\
+	
+	
+	
+	
+\end{description}
+
+ 
+
+

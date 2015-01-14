@@ -1,0 +1,1417 @@
+% !TeX encoding = UTF-8
+
+
+
+\newpage
+
+
+
+\subsection{Mathematische Grundbegriffe}
+
+~\\
+
+\subsubsection{Ableitung}
+
+... einer reellen Funktion:\\ \break
+
+\[f: x \in \mathbb{R} \longmapsto f(x) \in \mathbb{R}\]
+
+\[f'(x) = \frac{df}{dx} = \lim_{\vartriangle x \to 0} f(x) = \frac{f(x + \vartriangle x) - f(x)}{\vartriangle x} \]
+
+% TODO: genauer recherchieren
+
+~\\
+
+\begin{flushleft}
+	
+	Die Schreibweise bei der $\frac{d}{dx}$ dem Funktionsnamen vorangestellt wird, $\frac{df}{dx}$ nennt sich leibnizsche Schreibweise.\hfill \break
+	
+	Die Schreibweise aus Funktionsnamen und einem Punkt darüber, $\dot{f}(t)$ nennt sich newtonsche Schreibweise ($t$ bezeichnet die Zeit).
+	
+\end{flushleft}
+
+
+\[\dot{f}(t) = \frac{df}{dt}\]
+
+~\\
+
+\paragraph{\underline{Höhere Ableitungen}:} z.B. für die 2. Ableitung schreiben wir
+
+\[f''(x) = \frac{d^2f}{dx^2} = \frac{d}{dx}\Big(\frac{df}{dx}\Big)\]
+
+\[\ddot{f}(t) = \frac{d^2f}{dt^2} \text{~~~usw.}\]
+
+~\\
+
+\paragraph{Ableitungsregeln}
+
+~\\
+
+\begin{itemize}
+	
+	\item Produktregel: \hfill
+	
+	\[\frac{d}{dt}\left[f(t)g(t)\right] = \dot{f}(t) g(t) + f(t) \dot{g}(t)\]
+	
+	\iec
+	
+	\item Kettenregel: \hfill
+	
+	$ \frac{d}{dt} f(g(t)) = \frac{df(g(t))}{dg} \cdot \underbrace{\frac{dg(t)}{dt}}_{\dot{g}(t)}$
+	
+	\iec
+	
+\end{itemize}
+
+
+~\\
+
+Beispiel: \qquad $f(x) = sin x , g(t) = wt$
+
+\begin{align*}
+f(g(t)) &= sin(wt) \\
+\dot{f}(g(t)) &= \frac{df}{dt} = \underbrace{\frac{df}{dg}}_{cos~g(t)} \cdot \underbrace{\dot{g}(t)}_{w} \\
+\dot{f}(g(t)) &= w~cos(wt)
+\end{align*}
+
+
+
+\newpage
+
+
+
+\subsubsection{Integrale}
+
+
+\begin{flushleft}
+
+Ab jetzt beziehen wir uns auf Riemannsche Integrale (wenn dies nicht oder nicht mehr der Fall ist, werden wir einen Hinweis geben).\\
+
+Stell Dir den Graphen einer Funktion vor, die bei $x = 0$ anfängt und bis $x=2$ über der $x$-Achse verläuft. Danach liegen alle Funktionswerte unter der $x$-Achse. Was ist das bestimmte Integral $\int\limits_{0}^{5}$ von Deiner Funktion anschaulich? - Nenne die Fläche, welche die Kurve von $x = 0$ bis $x = 2$ und die $x$-Achse einschließen $A$. Die andere Fläche von $x = 2$ bis $x = 5$ nennst Du $B$. Das Integral beschreibt die Differenz $A - B$ zwischen den Flächeninhalten.\\
+
+In der Physik werden Integrale nicht wie in der Mathematik mit $dx$ hinten geschrieben. Wir schreiben $dx$ gleich nach dem Symbol $\int$:\\
+
+\[
+	\int ~ f(x) ~ dx ~ =: ~ \underbrace{\int ~ dx ~ f(x)}_{\text{Physiker Schreibweise}}
+\]
+
+
+~\\
+
+Regel:
+
+\[
+\int_{a}^{b} ~ dx ~ f(x) ~ = ~ - \int_{b}^{a} ~ dx ~ f(x)
+\]
+
+~\\
+
+Hauptsatz der Differential- und Integralrechnung (HDI):
+
+~\\
+
+
+$F(x) ~ := ~ \int_{a}^{x} ~ dy ~ f(y)$ ist \underline{Stammfunktion} zu $f(x)$, d.h. $\frac{dF}{dx} ~ = ~ f(x)$.\\
+
+
+~\\
+
+Eigenschaften:
+
+\begin{itemize}
+	
+	\item Additivität:
+	
+	\[
+	\int_{a}^{c} ~ dx ~ f(x) ~ = ~ \int_{a}^{b} ~ dx ~ f(x) + \int_{b}^{c} ~ dx ~ f(x)
+	\]
+	
+	\item Linearität:
+	
+	\[
+	\int_{a}^{b} ~ dx ~ \left[\lambda ~ f(x) ~ + ~ \mu ~ g(x)\right] ~ = ~ \lambda \int_{a}^{b} ~ dx ~ f(x) ~ + ~ \mu \int_{a}^{b} ~ dx ~ g(x)
+	\]
+	
+\end{itemize}
+
+~\\
+
+Kurzschreibweise:
+
+~\\
+
+$\left[F(x)\right]_{a}^{b} ~ = ~ F(b) ~ - ~ F(a)$
+
+~\\
+
+Monom: $f(x) ~ = ~ x^\alpha ~ , ~ \alpha \in \mathbb{R} ~ , ~ x \neq -1$~, Stammfunktion: $\frac{1}{\alpha + 1} ~ x^{\alpha + 1} ~ + ~ C$ mit beliebiger \underline{Integrationskonstante} $C$.
+
+~\\
+
+\[
+\int_{a}^{b} ~ dx ~ x^\alpha ~ = ~ \left[\frac{1}{\alpha + 1} ~ x^{\alpha + 1} ~ + ~ C\right]_{a}^{b} ~
+= ~ \frac{1}{\alpha + 1} ~ b^{\alpha + 1} ~ - \frac{1}{\alpha + 1} ~ a^{\alpha + 1}
+\]
+
+~\\
+
+Integriert man \textit{(1)}, so findet man die Regel der \underline{partiellen Integration}.
+
+~\\
+
+\[\int_{t_{1}}^{t_{2}} ~ dt ~ f(t) ~ \dot{g}(t) ~ = ~ - \int_{t_1}^{t_2} ~ dt ~ \dot{f}(t) ~ g(t) ~ + ~ \int_{t_1}^{t_2} ~ dt ~ \frac{d}{dt}(f(t) ~ g(t)) ~ = ~ \left[f(t) ~ g(t)\right]_{t_1}^{t_2} ~ - \int_{t_1}^{t_2} ~ dt ~ \dot{f}(t) ~ g(t)\]
+
+\iec
+
+~\\
+
+Integriert man \textit{(2)}, so findet man die \underline{Substitutionsregel}:\\
+(sofern $g(t)$ monoton und $\dot{g}(t)$ stetig für $t \in \left[t_1,~t_2\right]$)
+
+
+\[\int_{g_1}^{g_2} ~ dg ~ f(g) ~ = ~ \int_{t_1}^{t_2} ~ dt ~ \dot{g}(t) ~ f(g(t))\]
+
+\iec
+
+
+~\\Merkregel: \qquad $dg ~ = ~ \frac{dg}{dt}dt$
+
+
+\end{flushleft}
+
+
+
+\newpage
+
+
+
+\subsubsection{Logarithmus- und Exponentialfunktion}
+
+
+\begin{flushleft}
+
+~\\
+
+\paragraph*{Logarithmus}
+
+~\\~\\Der natürliche Logarithmus ist für Werte größer $0$ definiert durch
+
+
+\[ln(x) := \int_{1}^{x} ~ \frac{dx}{x} ~ \Rightarrow ~ ln(1) = 0\]
+
+\iec
+
+~\\
+
+Eigenschaften (Übungsblatt 1):
+
+~\\
+
+
+\begin{enumerate}
+	
+	\item $ln(xy) ~ = ~ ln(x) ~ + ~ ln(y)$, für $x,y ~ > ~ 0$ \iec
+	
+	\item $ln(x^\alpha) ~ = ~ \alpha ~ ln(x)$, für $\alpha \in \mathbb{R}$, $x > 0$ \iec
+	
+\end{enumerate}
+
+~\\
+
+
+\paragraph*{Exponentialfunktion}
+
+
+~\\~\\Die Exponentialfunktion $exp(x)$ definieren wir als Funktion mit den Eigenschaften:
+
+~\\
+
+\begin{enumerate}
+	
+	\item $\frac{d ~ exp(x)}{dx} ~ = ~ exp(x)$
+	
+	\iec
+	
+	\item $exp(0) = 1$
+	
+	\iec
+	
+\end{enumerate}
+
+~\\
+
+$\Rightarrow ~ exp(x)$ in einem Intervall $[a, ~ \infty)$ mit $a < 0$ monoton wachsend.
+
+~\\
+
+\[\text{\textit{(8)}} ~ \Rightarrow ~ \frac{1}{exp(x)} ~ \frac{d ~ exp(x)}{dx} ~ = ~ 1\]
+
+\[~ \Rightarrow ~ \int_{0}^{y} ~ dx \underbrace{\frac{1}{exp(x)}}_{\text{automatisch > 0}} ~ \frac{d ~ exp(x)}{dx} ~ = ~ \int_{0}^{y} ~ dx ~ 1 ~ = ~ y\]
+
+\iec
+
+Jetzt substituieren wir mit $z ~ := ~ exp(x)$. 
+
+\[\underbrace{\Rightarrow}_{Merkregel} ~ dz ~ = ~ dx ~ \frac{d ~ exp(x)}{dx}\]
+
+~\\
+
+\[\text{\textit{(10)}} ~ \Rightarrow ~ \int_{exp(0)}^{exp(y)} ~ dz ~ \frac{1}{z} ~ = ~ y\]
+
+~\\
+
+\[~ \Rightarrow ~ \left[ln(z)\right]_{1}^{exp(y)} ~ = ~ y ~ \qquad \equiv: ~ (*)\]
+
+~\\
+
+Hinweis für Schlafmützen: Bei der Substitution etwas schärfer hinsehen, $dz$ kann direkt eingesetzt werden, denn\\
+\[\int_{0}^{y} ~ dx \frac{1}{exp(x)} ~ \frac{d ~ exp(x)}{dx} ~ = ~ \int_{0}^{y} ~ dx ~ \frac{d ~ exp(x)}{dx} ~ \frac{1}{exp(x)} ~ = ~ \int_{0}^{y} ~ dz ~ \frac{1}{exp(x)} ~ = ... \]
+
+.
+~\\~\\
+
+Weiter von $(*)$ aus:\\
+
+
+\[~ \Rightarrow ~ ln(exp(y)) ~ = ~ y ~ \qquad \Rightarrow ~ exp ~ \text{ist die Umkehrfunktion von} ~ ln\]
+
+\iec
+.
+
+~\\
+
+Aus \textit{(6)} und \textit{(7)} folgt mit $x ~ = exp(t), y ~ = ~ exp(s)$
+
+\begin{enumerate}
+	
+	\item
+	
+	$ln( ~ exp(t) ~ exp(s) ~ ) ~ = ~ t ~ + ~ s$
+	
+	$ \Rightarrow ~ exp( ~ ln( ~ exp(t) ~ exp(s) ~ ) ~ ) ~ = ~ exp(t ~ + ~ s)$
+	
+	$ \Rightarrow ~ exp(t) ~ exp(s) ~ = ~ exp( ~ t ~ + ~ s ~ )$
+	
+	\iec
+	
+	\item
+	
+	$(exp(t))^{\alpha} ~ = ~ exp(\alpha t)$ für $t,s,\alpha \in \mathbb{R}$
+	
+	\iec
+	
+\end{enumerate}
+
+Dies rechtfertigt die Schreibweise $exp(x) ~ =: ~ e^x$, so dass \textit{(12)} und \textit{(13)} zu $e^t ~ e^s ~ = ~ e^{t ~ + ~ s}$ und ${(e^t)}^{\alpha} ~ = ~ e^{t ~ \alpha}$ werden - Verwechslungen durch das Hochstellen der Exponenten sind so ausgeschlossen.
+
+~\\
+
+Eulersche Zahl: $e ~ = ~ 2,71828 ...$
+
+
+
+\end{flushleft}
+
+
+
+\newpage
+
+
+\subsubsection{Komplexe Zahlen}
+
+
+\begin{flushleft}
+
+
+~\\
+
+Geordnete Paare reeller Zahlen.
+
+~\\
+
+$(x,y) \in \mathbb{R}^{2}$ ist ein Zwei-Tupel.
+
+~\\
+
+Schreibweise $(x, ~ y) ~ \leftarrow ~ x ~ + iy$, $x$ hei{"s}t Realteil, $i$ ist die Imaginäre Einheit und $y$ hei{"s}t Imaginärteil.
+
+~\\
+
+Addition:
+
+~\\
+
+\[(x_1 ~ + ~ iy_1) ~ + ~ (x_2 ~ + ~ iy_2) ~ := ~ (x_1 ~ + ~ x_2) + i (y_1 ~ + ~ y_2)\]
+
+\iec
+
+~\\
+
+Multiplikation:
+
+~\\
+
+\[(x_1 ~ + ~ iy_1) ~ * ~ (x_2 ~ + ~ iy_2) ~ := ~ x_1 x_2 ~ - ~ y_1 y_2 ~ + ~ i (x_1 y_2 ~ + ~ x_2 y_1)\]
+
+\iec
+
+~\\
+
+(Multiplikation) Spezialfall: $x_1 = x_2 = 0$ und $y_1 = y_2 = 1$
+
+~\\
+
+\[i^2 ~ = ~ -1\]
+
+\iec
+
+~\\
+
+Man wählt $i ~ := ~ \sqrt{-1}$.
+
+\iec
+
+~\\
+
+Eigene Notiz: Die Komplexen Zahlen sind eine Körpererweiterung und wurden u. A. deswegen konstruiert, um Gleichungen zu lösen, die allein über $\mathbb{R}$ nicht lösbar sind. Die Formulierungen hier sind daher etwas komisch.
+
+~\\
+
+Die Menge der komplexen Zahlen ist durch $\mathbb{C}$ bezeichnet und durch $\mathbb{C} ~ := ~ \{x ~ + ~ iy ~ | ~ x,y \in \mathbb{R}\}$ definiert.
+
+~\\
+
+Eigenschaften:
+
+Für alle $v,w,z \in \mathbb{C}$ gilt:
+
+\begin{enumerate}
+	
+	\item Kommutativgesetze: \qquad $w + z = z + w$ \qquad und \qquad $wz = zw$
+	
+	\item Assoziativgesetze: \hfil \\~\\ \qquad $(v + w) + z = v + (w + z) =: v + w + z$ \qquad und \qquad $(vw)z = v(wz) =: vwz$
+	
+	\item Distributivgesetz: \qquad $v(w+z) = vw+vz$
+	
+	\item Inverses Element zu $z=x+iy$: \qquad $-z + z = 0$ \qquad wobei \quad $-z = -x -iy$
+	
+	~\\
+	
+	Für $z \neq 0$: $\frac{1}{z} := \frac{1}{x+iy} = \frac{x - iy}{(x+iy)(x-iy)} = \frac{x}{x^2 + y^2} -i \frac{y}{x^2 + y^2}$, so dass $\frac{1}{z}z = 1$.
+
+	
+\end{enumerate}
+
+~\\
+	
+	\[\left|z\right| ~ := ~ r ~ := ~ \sqrt{x^2 + y^2} ~ = ~ \sqrt{Re(z)^2 ~ + ~ Im(z)^2}\]
+	
+	\iec
+	
+	$|z|$ heißt Betrag von $z$.
+	
+	~\\
+	
+	Man schaue an dieser Stelle nach, wie die Polardarstellung komplexer Zahlen aussieht. Aus der Skizze liest man ab:
+	
+	~\\
+	
+	\[Re(z) = \left|z\right| cos(\phi)\]
+	\[Im(z) = \left|z\right| sin(\phi)\]
+	
+	~\\
+	
+	(Beide Gleichungen laufen unter der selben Nummer)
+	
+	\iec
+	
+	~\\
+	
+	\underline{Demnach:}
+	
+	~\\
+	
+	\[z = |z| cos(\phi) ~ + ~ i ~ |z| sin(\phi)\]
+	
+	\iec
+	
+	Die Funktion
+	
+	\[f(\phi) = cos(\phi) + i ~ sin(\phi)\]
+	
+	\iec
+	
+	erfüllt:
+	
+	~\\
+	
+	\[ \frac{df}{d \phi} = i ~ f(\phi) \]
+	
+	
+	\iec
+	
+	~\\
+	
+	Die Lösung ist: $f(\phi) = e^{i ~ \phi} ~ \cdot ~ C$, mit beliebigem $C \in \mathbb{C}$, was wegen \textit{(8)} Gl. \textit{(22)} erfüllt und mit $\phi = 0$ findet man auch $f(0) = 1 = e^0$ für $C = 1$.
+	
+	~\\
+	
+	\[ \Rightarrow ~ exp(i \phi) = e^{i \phi} := cos(\phi) + i ~ sin(\phi)\]
+	
+	\iec
+	
+	~\\
+	
+	\underline{\textit{(23)}} ist die Verallgemeinerung der Exponentialfunktion auf imaginäre Argumente. Für beliebige komplexe Zahlen definieren wir:
+	
+	~\\
+	
+	\[exp(z) = e^{x + iy} := e^x ~ e^{iy}\]
+	
+	\iec
+	
+	Mit \textit{(23)} wird \textit{(20)} zu
+	
+	\[z = |z| e^{i \phi} \qquad \text{\underline{(Polardarstellung)}}\]
+	
+	\iec
+	
+	~\\
+	
+	Den Logarithmus definieren wir für komplexe Argumente über
+	
+	~\\
+	
+	\[ln(z) ~ = ~ ln \left[ ~ |z| ~ e^{i ~ \phi} ~ \right] ~ := ~ ln(|z|) ~ + ~ ln(e^{i ~ \phi}) ~ = ~ ln(|z|) ~ + ~ i ~ \phi\]
+	
+	\iec % increment equation counter
+	
+	Wobei wir $\phi \in [-\pi, ~ \pi]$ vereinbaren.
+	
+	~\\
+	~\\
+	
+	Man findet \qquad $e^{i ~ ({\phi}_{1} + {\phi}_{2})} ~ = ~ e^{i ~ {\phi}_{1}} ~ e^{i ~ {\phi}_{2}}$
+		
+	\iec
+	
+	~\\
+	
+	Mit \textit{(24)}: \qquad $e^{z_1 ~ + ~ z_2} ~ = ~ e^{z_1} ~ e^{z_2}$
+	
+	\iec
+	
+	(für $z_1,z_2 \in \mathbb{C}$)
+	
+	~\\
+	~\\
+	
+	Aus \textit{(23), (27)} findet man: \qquad $cos(\alpha ~ + ~ \beta) ~ + ~ i ~ sin(\alpha ~ + ~ \beta) ~ = ~ e^{i ~ (\alpha ~ + ~ \beta)}$
+	
+	~\\
+	
+	$ ~ \underbrace{=}_{\textit{(27)}} ~ e^{i ~ \alpha} ~ e^{i ~ \beta} ~ = ~ (cos ~  \alpha ~ + ~ i ~ sin ~ \alpha) ~ (cos ~  \beta ~ + ~ i ~ sin ~ \beta)$
+	
+	~\\
+	
+	$ ~ = ~ (cos ~ \alpha ~ cos \beta ~ -sin ~ \alpha ~ sin \beta) ~ + ~ i ~ (sin ~ \alpha ~ cos ~ \beta ~ + ~ cos ~ \alpha ~ sin ~ \beta)$
+	
+	~\\
+	~\\
+	
+	Aus Real- und Imaginärteil findet man die \underline{Additionstheoreme}:
+	
+	~\\
+	
+	\[cos(~ \alpha ~ + ~ \beta ~) ~ = ~ cos ~ \alpha ~~ cos ~ \beta ~ - ~ sin ~ \alpha ~~ sin ~ \beta \]	
+	\[sin(~ \alpha ~ + ~ \beta ~) ~ = ~ sin ~ \alpha ~~ cos ~ \beta ~ + ~ cos ~ \alpha ~~ sin ~ \beta\]
+	
+	\iec
+	
+	(Beide Gleichungen laufen unter der selben Nummer.)
+	
+	~\\
+	
+	Hinweis für Schlafmützen. Sieh Dir die letzte Gleichungskette genau an:
+	
+	~\\
+	
+	$ ~ cos(\alpha ~ + ~ \beta) ~ + ~ i ~ sin(\alpha ~ + ~ \beta)$
+	$ ~ = ~ ...$
+	$ ~ ... ~ = ~ (cos ~ \alpha ~ cos \beta ~ -sin ~ \alpha ~ sin \beta) ~ + ~ i ~ (sin ~ \alpha ~ cos ~ \beta ~ + ~ cos ~ \alpha ~ sin ~ \beta)$
+	
+	~\\
+	
+	Zu komplexen Zahlen: Multiplikation und Division sind einfacher in der Polardarstellung.
+	
+	~\\
+	
+	$z_1 ~ = ~ r_1 ~ e^{i ~ {\phi}_{1}}$ ~ ; ~ $z_2 ~ = ~ r_2 ~ e^{i ~ {\phi}_{2}}$
+			
+	~\\
+	
+	$r_1 ~ = ~ |z_1|$ hei{"s}t \underline{Betrag} ~ ; ~ ${\phi}_{1} ~ = ~ arg(z_1)$
+	
+	~\\
+	
+	Phase von $z_1$: \qquad $z_1 ~ z_2 ~ = ~ r_1 ~ r_2 ~ e^{i ~ ({\phi}_{1} ~ + ~ {\phi}_{2})}$ ~ ; ~ $\frac{1}{z_1} ~ = ~ \frac{1}{r_1} ~ e^{-i ~ {\phi}_{1}}$
+	
+	~\\
+	
+	$z^{*} ~ := ~ r ~ e^{-i ~ \phi} ~ = ~ x ~ - ~ iy$ ist zu $z ~ = ~ r ~ e^{i ~ \phi} ~ = ~ x ~ + ~ iy$ \underline{komplex konjugiert}.
+	
+	~\\
+	
+	Nützlich, um Integrale mit $sin$ und $cos$ zu lösen:
+	
+	~\\
+	
+	\[cos ~ x ~ = ~ \frac{1}{2} ~ (e^{i ~ x} ~ + ~ e^{-i ~ x})\]
+	\[sin ~ x ~ = ~ \frac{1}{2i} ~ (e^{i ~ x} ~ - ~ e^{-i ~ x})\]
+	
+	\iec
+	
+	~\\
+	
+	Hinweis: Beweis durch Einsetzen von $e^{i ~ x} ~ = ~ cos ~ x ~ + ~ i ~ sin ~ x$
+	
+	~\\
+	~\\
+	
+	Definitionen:
+	
+	\[cosh ~ x ~ = ~ \frac{1}{2} ~ (e^x ~ + ~ e^{-x}) \qquad (\underline{\text{Cosinus Hyperbolicus}})\]
+	\[sinh ~ x ~ = ~ \frac{1}{2} ~ (e^x ~ - ~ e^{-x}) \qquad (\underline{\text{Sinus Hyperbolicus}})\]
+
+\iec
+
+
+\newpage
+
+
+\subsubsection{\underline{Standardmethoden der Integration}}
+
+
+~\\
+
+$n \in \mathbb{N}_{0}$ ~ ; ~ $a_k \in \mathbb{C}$
+
+\[P(x) ~ = ~ \sum_{k ~ = ~ 0}^{n} ~ a_k ~ x^k ~ = ~ a_0 ~ + ~ a_1 ~ x ~ + ~ a_2 ~ x^2 ~ + ... + a_n ~ x^n \qquad \text{hei{"s}t \underline{Polynom vom Grad $n$}}\]
+
+\iec
+
+~\\
+
+Sei $n \geq 1$: $P(x)$ hat keine eindeutige \underline{Nullstellenzerlegung}.
+	
+~\\
+~\\
+
+$P(x) ~ = ~ a_n ~ \prod_{k ~ = ~ 1}^{m} ~ (x ~ - ~ x_k)^{n_k}$ mit $m \leq n$, $n_k \in \mathbb{N}$, $\sum_{k ~ = ~ 1}^{m} ~ n_k = n$ ; $x_k \in \mathbb{C}$
+
+~\\
+
+$ ~ = ~ a_k ~ [ ~ (x ~ - ~ x_1)^{n_1} ~ (x ~ - ~ x_2)^{n_2} ... (x ~ - ~ x_m)^{n_m} ~ ]$, $n_k$ hei{"s}t \underline{Grad} der Nullstellen $x = x_k$
+
+~\\
+~\\
+
+\underline{Beispiele:} ($\rightarrow$)
+
+~\\
+
+
+
+$~ \rightarrow ~ P(x) ~ = ~ 3x^3 ~ - ~ 15x^2 ~ + ~ 24x ~ - ~ 12$
+~\\
+$~ = 3 ~ (x ~ - ~ 1)(x ~ - ~ 2)^2$
+~\\
+~\\
+Das ergibt: $n = 3$ ~ ; ~ $a_3 = 3$ ~ ; ~ $m = 2$ ~ ; ~ $x_1 = 1$ ~ ; ~ $n_1 = 1$ ~ ; ~ $x_2 = 2$ ~ ; ~ $n_2 = 2$
+
+~\\
+~\\
+
+$~ \rightarrow ~ P(x) ~ = ~ x^2 ~ - ~ (\frac{7}{2} ~ + ~ \frac{3}{2} ~ i) x ~ + ~ 1 ~ + ~ 2i$
+~\\
+$~ = ~ (x ~ - ~ \frac{1 ~ + ~ i}{2})(x ~ - ~ 3 ~ - ~ i)$
+
+~\\
+~\\
+
+$~ \rightarrow ~ P(x) ~ = ~ x^2 ~ + ~ 1 ~ = ~ (x ~ + ~ i)(x ~ - ~ i)$
+
+~\\
+
+$a_k \in \mathbb{R} \Rightarrow$ Nullstellen reell oder paarweise zueinander komplex konjungiert.
+
+~\\
+~\\
+
+\paragraph*{\underline{Rationale Funktionen}}
+
+$R(x) ~ := ~ \frac{P(x)}{Q(x)}$ mit Polynom $P(x), ~ Q(x)$
+
+~\\
+
+Grad $Q \geq 1$ und $Q(x) ~ = ~ a_n ~ \prod_{k ~ = ~ 1}^{m} ~ (x ~ - ~ x_k)^{n_k}$
+
+~\\
+
+Wir wählen $P,Q$ teilerfremd, d.h. $x_1,x_2,...,x_m$ sind keine Nullstellen von $P$. $x_1, ..., x_m$ sind die \underline{Pole} von $R(x)$.
+
+~\\
+~\\
+
+\underline{Partialbruchzerlegung:}
+
+~\\
+
+Man kann $R(x)$ schreiben als
+
+~\\
+
+\begin{longtable}{ccccccccc}
+	
+	  $R(x)$
+	& $=$
+	& $\frac{A_{11}}{(x ~ - ~ x_1)}$
+	& $+$
+	& $\frac{A_{12}}{(x ~ - ~ x_1)^2}$
+	& $+$
+	& $...$
+	& $+$
+	& $\frac{A_{1 n_1}}{(x ~ - ~ x_1)^{n_1}}$
+	
+	\\
+	
+	  ~
+	& $+$
+	& $\frac{A_{21}}{(x ~ - ~ x_2)}$
+	& $+$
+	& $\frac{A_{22}}{(x ~ - ~ x_2)^2}$
+	& $+$
+	& $...$
+	& $+$
+	& $\frac{A_{2 n_2}}{(x ~ - ~ x_2)^{n_2}}$
+	
+	\\
+	
+	  ~
+	& $\vdots$
+    & ~
+	& ~
+	& ~
+	& ~
+	& ~
+	& ~
+	& ~
+	
+	\\
+	
+	  ~
+	& $+$
+	& $\frac{A_{m1}}{(x ~ - ~ x_m)}$
+	& $+$
+	& $\frac{A_{m2}}{(x ~ - ~ x_m)^2}$
+	& $+$
+	& $...$
+	& $+$
+	& $\frac{A_{m n_m}}{(x ~ - ~ x_m)^{n_m}}$
+	
+	\\
+	
+	  ~
+	& $S(x)$
+	& ~
+	& ~
+	& ~
+	& ~
+	& ~
+	& ~
+	& ~
+	
+\end{longtable}
+
+\addtocounter{ec}{1} % Wurde 33 übersprungen?
+\iec
+
+
+~\\
+
+mit $Ajk \in \mathbb{C}$ und einem Polynom $S(x)$ mit $Grad ~ S ~ = ~ Grad ~ P ~ - ~ Grad ~ Q$ . $A_{k_1}$ hei{"s}t \underline{Residuum} von $R(x)$ beim Pol $x ~ = ~ x_k$.
+
+~\\
+~\\
+
+\underline{Beispiel:}
+
+~\\
+
+$R(x) ~ = ~ \frac{2x^3}{(x ~ - ~ 1)(x - 2)^2} ~ = ~ \frac{2}{x - 1} ~ + ~ \frac{8}{x ~ - ~ 2} ~ + ~ \frac{16}{(x ~ - ~ 2)^2} ~ + ~ 2$
+
+~\\
+
+($2$ ist konstantes Polynom)
+
+~\\
+~\\
+
+Praktische Berechnung der $A_{jk}$:
+
+~\\
+
+1.
+
+~\\
+
+
+\begin{align*}
+\underset{x ~ \rightarrow ~ x_j}{\lim} \left[(x ~ - ~ x_j)^{n_j} ~ R(x)\right] ~ &\ueq[\textit{(34)}] ~ A_{j n_j} \\
+\underset{x ~ \rightarrow ~ x_j}{\lim} \left[P(x) ~ \frac{(x ~ - ~ x_j)^{n_j}}{a_n ~ \prod_{k ~ = ~ 1}^{m} ~ (x ~ - ~ x_k)^{n_k}}\right] ~  &= ~ A_{j n_j} \\
+&= \frac{P(x_j)}{a_n ~ (\prod_{k ~ = ~ 1}^{j ~ - ~ 1} ~ (x ~ - ~ x_k)^{n_k}) ~ (\prod_{k ~ = ~ j ~ + ~ 1}^{m} ~ (x ~ - ~ x_k)^{n_k})}
+\end{align*}
+
+~\\
+
+Hinweis: In der zweiten Gleichung mit $(x ~ - ~ x_j)^{n_j}$ kürzen.
+
+~\\
+
+In den Fällen $j ~ = ~ 1$ und $j ~ = ~ m$:
+
+~\\
+
+$\prod_{k ~ = ~ 1}^{0} ~ (x ~ - ~ x_k) ~ := ~ 1$ \qquad bzw.: $\prod_{k ~ = ~ m ~ + ~ 1}^{m} ~ (x ~ - ~ x_k) ~ = ~ 1$
+
+
+~\\
+
+2. Rechte Seite von \textit{(34)} auf den Hauptnenner bringen und Koeffizienten der Zähler mit $\frac{P(x)}{a_n}$ vergleichen.
+
+~\\
+~\\
+
+\underline{Im Beispiel:}
+
+~\\
+
+
+\begin{align*}
+	A_{11} &= \underset{x ~ \rightarrow ~ 1}{\lim} ~ \left[(x-1) ~ \frac{2x^3}{(x ~ - ~ 1) ~ (x ~ - ~ 2)^2}\right] = 2 \\
+	A_{22} &= \underset{x ~ \rightarrow ~ 2}{\lim} ~ \left[(x-2)^2 ~ \frac{2x^3}{(x ~ - ~ 1) ~ (x ~ - ~ 2)^2}\right] = 16
+\end{align*}
+
+~\\
+
+$Grad ~ S ~ = ~ 0 \Rightarrow ~ S ~ = ~ S_0 ~ = ~ const$.
+
+~\\
+
+\begin{align*}
+	R(x) &= \frac{2}{x ~ - ~ 1} + \frac{16}{(x ~ - ~ 2)^2} + \frac{A_{21}}{x ~ - ~ 2} + S_0 \\
+	~ &= \frac{S_0 ~ x^3 + (2 ~ + ~ A_{21} ~ - ~ 5 ~ S_0) ~ x^2 ~ + ~ (8 ~ - ~ 3 ~ A_{21} ~ + ~ 8 ~ S_0) ~ x ~ + ~ 2 ~ A_{21} ~ - ~ 4 ~ S_0 ~ - ~ 8}{(x ~ - ~ 2)^2 ~ (x ~ - ~ 1)} \\
+	&= \frac{2x^3}{(x ~ - ~ 1) ~ (x ~ - ~ 2)^2}
+\end{align*}
+
+$S_0 ~ = ~ 2$ und $A_{21} ~ = ~ 8$
+
+~\\
+
+Mit Hilfe der Partialbruchzerlegung können wir \underline{jede} rationale Funktion integrieren:
+
+~\\
+$\int ~ dx ~ R(x) \underbrace{=}_{\textit{(34)}} A_{11} ~ ln(x ~ - ~ x_1) ~ - ~ A_{12} ~ \frac{1}{x ~ - ~ x_1} ~ - ~ \frac{A_{13}}{2} ~ \frac{1}{(x ~ - ~ x_1)^2}$
+~\\~\\~
+$... ~ - ~ \frac{A{1 ~ n_1}}{(n_1 - 1) ~ (x ~ - ~ x_1)^{n_1 ~ - ~ 1}} ~ + ~ A_{21} ~ ln(x ~ - ~ x_2) ...$
+~\\~\\~
+$ ~ + \int ~ dx ~ S(x) \rightarrow Polynom$
+
+\iec
+
+~\\
+
+Wird $(x ~ - ~ x_j)$ auf dem Integrationsweg negativ, so kann man als Stammfunktion für $\frac{1}{x ~ - ~ x_j}$ die Funktion $ln(\frac{x ~ - ~ x_k}{\alpha})$ mit geeignet gewählten $\alpha \in \mathbb{C}$, z.B. $\alpha ~ = ~ -1$ nehmen, denn $\frac{d}{dx} ~ ln(\frac{x ~ - ~ x_k}{\alpha}) ~ = ~ \frac{\alpha}{x ~ - ~ x_k} ~ \frac{1}{\alpha} ~ = ~ \frac{1}{x ~ - ~ x_k}$
+
+~\\
+~\\
+
+\newpage
+
+
+\underline{Standardsubstitutionen:}
+
+~\\
+~\\
+
+a)
+
+~\\
+
+\[\int ~ dx ~ \underbrace{R}_{Rationale ~ Funktion}(\sqrt{a ~ + ~ bx}) ~ \text{mit} ~ a,b \in \mathbb{R} ~ \text{und} ~ a ~ + ~ b x \geq 0\]
+
+~\\
+~\\
+
+\underline{Beispiel:}
+
+~\\
+
+\[R(\sqrt{a ~ + ~ bx}) ~ = ~ \frac{2 ~ \sqrt{a ~ + ~ bx}}{1 ~ + ~ (\sqrt{a ~ + ~ bx})^2 ~ + ~ 3 ~ \sqrt{a ~ + ~ bx}}\]
+
+~\\
+
+Substitution: $t ~ = ~ \sqrt{a ~ + ~ bx}$
+
+~\\
+
+$\Rightarrow ~ x ~ = ~ \frac{t^2 ~ - ~ a}{b}$
+
+~\\
+
+$dt ~ = ~ \frac{b}{2 ~ \underbrace{\sqrt{a ~ + ~ bx}}_{\frac{dt}{dx}}} ~ dx ~ = ~ \frac{b}{2 t} ~ dx$
+
+~\\
+
+$\Rightarrow ~ \int ~ dx ~ R(\sqrt{a ~ + ~ bx}) ~ = ~ \int ~ dt ~ \underbrace{\frac{2t}{b} ~ R(t)}_{\text{Rationale Funktion}}$
+
+~\\
+~\\Integral mit Partialbruchzerlegung lösbar.
+
+
+~\\
+~\\
+
+b)
+
+~\\
+
+
+\[\int ~ dx ~ R(\sqrt{(x ~ - ~ a) ~ (x ~ - ~ b)}) ~ \text{mit} ~ b ~ > ~ a ~ \in \mathbb{R}\]
+
+~\\
+
+Euler Substitution:
+
+~\\
+
+\begin{align*}
+	t &= \sqrt{\frac{x ~ - ~ a}{x ~ - ~ b}} \qquad ~ \text{für} ~ x \geq b ~ \text{oder} ~ x \leq a \\
+	t &= \sqrt{\frac{x ~ - ~ a}{b ~ - ~ x}} \qquad ~ \text{für} ~ a \leq x \leq b
+\end{align*}
+
+\addtocounter{ec}{1}
+\iec % increment equation counter
+
+~\\
+
+\begin{align*}
+	\Rightarrow ~ x &= \frac{b ~ t^2 ~ - ~ a}{t^2 ~ - ~ 1} ~ ; ~ \sqrt{(x ~ - ~ a) ~ (x ~ - ~ b)} ~ = ~ |x ~ - ~ b| ~ t ~ = ~ (b ~ - ~ a) ~ \frac{t}{|t^2 ~ - ~ 1|} \\
+	\Rightarrow dx ~ &= ~ (a ~ - ~ b) ~ \frac{2t}{(t^2 ~ - 1)^2} ~ dt
+\end{align*}
+
+~\\
+
+\[~ \Rightarrow ~ \int ~ dx ~ R(\sqrt{(x ~ - ~ a) ~ (x ~ - ~ b)}) ~ = ~ 2 ~ (a ~ - ~ b) ~ \int ~ dt ~ \underbrace{\frac{t}{(t^2 ~ - 1)^2} ~ R(\frac{(b ~ - ~ a) ~ t}{|t^2 ~ - ~ 1|})}_{\text{Rationale Funktion}}\]
+
+(... jetzt: Lösung mit a) )
+
+~\\
+~\\
+
+c) , Spezialfall von b)
+
+~\\
+
+\[\int ~ dx ~ \frac{1}{\sqrt{1 ~ - ~ a^2 ~ x^2}} ~ ; ~ a > 0 ~ ; ~ -1 < ax < 1\]
+
+Substitution: \qquad $x ~ = ~ \frac{1}{a} ~ sin(t)$ ~ ; ~ $-\frac{\pi}{2} < t < \frac{\pi}{2}$
+
+~\\
+
+$ ~ \Rightarrow ~ dx ~ = ~ \frac{cos ~ t}{a} ~ dt$ ~ ; ~ $\frac{1}{\sqrt{1 ~ - ~ a^2 ~ x^2}} ~ = ~ \frac{1}{\sqrt{1 ~ - ~ sin^2 ~ t}} ~ = ~ \frac{1}{cos ~ t}$
+
+~\\
+
+\[~ \Rightarrow ~ \int ~ dx ~ \frac{1}{\sqrt{1 ~ - ~ a^2 ~ x^2}} ~ = ~ \frac{1}{a} ~ \int ~ dt ~ = ~ \frac{t}{a} ~ + ~ C ~ = ~ \frac{arcsin ~ ax}{a} ~ + ~ C\]
+
+\addtocounter{ec}{1}
+\iec
+
+~\\
+
+Euler Substitution als Lösung für den Spezialfall $a = 1$ ergibt stattdessen:
+
+~\\
+
+$t ~ = ~ \sqrt{\frac{1 ~ + ~ x}{1 ~ - ~ x}} ~ > ~ 1$
+
+~\\
+
+$x ~ = ~ \frac{t^2 ~ - ~ 1}{t^2 ~ + ~ 2} ~ \Rightarrow ~ dx ~ = ~ \frac{4t}{(1 ~ + ~ t^2)^2} ~ dt ~ \Rightarrow ~ \sqrt{1 ~ - ~ x^2} ~ = ~ \frac{2t}{1 ~ + ~ t^2}$
+
+~\\
+
+Demnach:
+
+~\\
+
+\[ ~ \int ~ dx \frac{1}{\sqrt{1 ~ - ~ x}} ~ = ~ 2 ~ \int ~ dt ~ \underbrace{\frac{1}{1 ~ + ~ t^2}}_{\frac{1}{(t ~ + ~ i) ~ (t ~ - ~ i)}}\]
+
+\[ ~ \underset{\text{Partialbruchzerlegung}}{=} ~ \int ~ dt \left[ \frac{i}{t ~ + ~ i} ~ - ~ \frac{-i}{t ~ - ~ i}\right] ~ = ~ i ~ \{ln(t ~ + ~ i) ~ - ~ ln(t ~ - ~ i)\} ~ + ~ C' ~ \]
+
+\[ ~ = ~ i ~ ln(\frac{t ~ + ~ i}{t ~ - ~ i}) ~ + ~ C' ~ = ~ i ~ ln\left(\frac{\sqrt{\frac{1 ~ + ~ x}{1 ~ - ~ x}} ~ + ~ i}{\sqrt{\frac{1 ~ + ~ x}{1 ~ - ~ x}} ~ - ~ i}\right) ~ + ~ C'\]
+
+\iec
+
+~\\
+
+\[ ~ \underbrace{=}_{(*)} ~ i ~ ln\left[ x ~ + ~ i ~ \sqrt{1 ~ - ~ x^2}\right] ~ + ~ C'\]
+
+~\\
+
+\textit{(*)} Bruch durch-multiplizieren mit $\sqrt{\frac{1 ~ + ~ x}{1 ~ - ~ x}} ~ + ~ i$ und mit $\sqrt{1 ~ - ~ x}$. Es gilt demnach:
+
+
+
+\[arcsin x ~ = ~ i ~ ln \left(x ~ + ~ i ~ \sqrt{1 ~ - ~ x^2}\right) ~ + ~ C ~ - ~ C'\]
+
+~\\
+
+Mit $x ~ = ~ -1 ~ : \qquad ln(-1) ~ = ~ i ~ \pi$ und $arcsin(-1) ~ = ~ - \frac{\pi}{2} ~ = ~ \underbrace{i ~ ln(-1)}_{- \pi} ~ + ~ C ~- ~ C'$
+
+~\\
+
+\[C ~ - ~ C' ~ = ~ \frac{\pi}{2}\]
+
+~\\
+
+\[arcsin(x) ~ = ~ i ~ ln \left[ x ~ + ~ i ~ \sqrt{1 ~ - ~ x^2}\right] ~ + ~ \frac{\pi}{2}\]
+
+
+\iec
+
+
+
+\begin{itemize}
+	
+	\item
+	
+	\[ ~ \int ~ dx \frac{1}{\sqrt{1 ~ + ~ a^2 ~ x^2}} ~ , ~ a > 0 ~ \]
+	
+\end{itemize}
+
+Substitution: $x ~ = ~ \frac{1}{a} ~ sinh ~ t ~ , t > 0$. Nützlich, weil: $cosh^2 ~ t ~ - ~ sinh^2 ~ t ~ = ~ 1$ \qquad (Warum? Nachrechnen)
+
+\[ ~ \sqrt{1 ~ + ~ a^2 ~ x^2} ~ = ~ cosh ~ t \]
+
+\[ ~ dx ~ = \frac{1}{a} ~ cosh ~ t \]
+
+~\\
+
+\[ ~ \int ~ dx \frac{1}{\sqrt{1 ~ + ~ a^2 ~ x^2}} ~ = ~ \frac{1}{a} ~ \int ~ dt ~ \frac{cosh ~ t}{cosh ~ t} ~ = ~ \frac{1}{a} ~ \int ~ dt ~ = ~ \frac{t}{a} ~ + ~ C ~ = ~ \frac{1}{a} ~ arcsinh(ax) ~ + ~ C ~ \]
+
+\iec
+
+~\\
+
+Substituiert man stattdessen $a^2 ~ x^2 ~ = ~ S$ und $z ~ = ~ \sqrt{\frac{S}{1 ~ + ~ S}}$ ~ , ~ s.o., findet man nach mehreren Schritten:
+
+
+\[ ~ \int ~ dx \frac{1}{\sqrt{1 ~ + ~ a^2 ~ x^2}} ~ = ~ \frac{1}{a} ~ ln \left[ax ~ + ~ \sqrt{1 ~ + ~ a^2 ~ x^2}\right] ~ + ~ C' \]
+
+\iec
+
+und (für $a ~ = ~ 1$) aus \textit{(42)} und \textit{(43)}:
+
+\[ ~ arcsinh ~ x ~ = ~ ln \left[x ~ + ~ \sqrt{1 ~ + ~ x}\right]\]
+
+~\\
+~\\
+
+d)
+
+~\\
+
+\[ ~ \int dx ~ R( ~ sin ~ x ~ , ~ cos ~ x ~ ) ~~~ \text{kann mit der Substitution} ~~~ t ~ = ~ tan ~ \frac{x}{2} , ~ x ~ = ~ 2 ~ arctan ~ t ~~~ \text{gelöst werden.}\]
+
+\[tan ~ y ~ = ~ \frac{sin ~ y}{cos ~ y}\]
+
+$ ~ \Rightarrow ~ \frac{d ~ tan ~ y}{dy} ~ = ~ sin ~ y ~ \frac{d}{dy} ~ \frac{1}{cos ~ y} ~ + ~ \frac{1}{cos ~ y} ~ \frac{d}{dy} ~ sin ~ y ~ = ~ \frac{sin^2 ~ y}{cos^2 ~ y} ~ + ~ 1 ~ = ~ \frac{1}{cos^2 ~ y}$
+~\\
+~\\
+$ ~ cos^2 ~ y ~ = ~ \frac{d ~ arctan ~ t}{dt} ~~~ | y = arctan ~ t$
+~\\
+~\\
+$ ~ = ~ \frac{cos^2 ~ y}{cos^2 ~ y ~ + ~ sin^2 ~ y}$
+~\\
+~\\
+$ ~ = ~ \frac{1}{1 ~ + ~ tan^2 ~ y} ~~~ | y = arctan ~ t$
+~\\
+~\\
+$ ~ = ~ \frac{1}{1 ~ + ~ t^2}$
+
+\iec
+
+~\\
+~\\
+
+Demnach ist $ ~ dx ~ = ~ \frac{2}{1 ~ + ~ t^2} ~ dt$ \qquad und weiter:
+
+~\\
+
+\begin{align*}
+	R(y, ~ z) ~ &= ~ \text{rationale Funktion mit Variablen $y$ und $z$} \\
+	&= \frac{a_{00} ~ + ~ a_{01} ~ y ~ + ~ a_{10} ~ z ~ + ~ a_{11} ~ yz ~ + ~ ...}{b_{00} ~ + ~ b_{01} ~ y ~ + ~ b_{10} ~ z ~ + ~ b_{11} ~ yz ~ + ~ b_{02} ~ y^2 ...}
+\end{align*}
+
+\iec
+
+~\\
+
+\[ ~ sin ~ x ~ \underbrace{=}_{\text{\textit{(29)}} ~ \alpha = \beta = \frac{x}{2}} ~  2 ~ sin ~ \frac{x}{2} ~ cos ~ \frac{x}{2} ~ = ~ \frac{2 ~ sin ~ \frac{x}{2} ~ cos ~ \frac{x}{2} ~}{cos^2 ~ \frac{x}{2} ~ + ~ sin^2 ~ \frac{x}{2}} ~ = ~ \frac{2t}{1 ~ + ~ t^2} ~ \]
+
+\[ ~ cos ~ x ~ \underbrace{=}_{\text{\textit{(29)}}} ~ cos^2 ~ \frac{x}{2} ~ - ~ sin^2 ~ \frac{x}{2} ~ = ~ \frac{cos^2 ~ \frac{x}{2} ~ - ~ sin^2 ~ \frac{x}{2} ~}{cos^2 ~ \frac{x}{2} ~ + ~ sin^2 ~ \frac{x}{2}} ~ = ~ \frac{1 ~ - ~ tan^2 ~ \frac{x}{2}}{1 ~ + ~ tan^2 ~ \frac{x}{2}} ~ = ~ \frac{1 ~ - ~ t^2}{1 ~ + ~ t^2} ~ \]
+
+\iec
+
+~\\
+
+\underline{Somit:}
+
+\[ ~ \int ~ dx ~ R(sin ~ x, cos ~ x) ~ = ~ 2 ~ \int ~ dt \frac{1}{1 ~ + ~t^2} ~ R(\frac{2t}{1 ~ + ~ t2} ~ , ~ \frac{1 ~ - ~ t^2}{1 ~ + ~ t^2}) ~ \]
+
+\iec
+
+$\text{Rationale Funktion} ~ \Rightarrow ~ \text{lösbar}$
+
+
+
+\end{flushleft}
+
+
+
+\newpage
+
+
+\subsubsection{Gew{"o}hnliche Differentialgleichungen}
+
+
+\begin{flushleft}
+
+
+~\\
+
+Gesucht: Funktion $y(t)$, die eine Gleichung 
+
+\[F\left( ~ \frac{d^{n} ~ y}{d^{t^n}} ~ , ~ ... ~ , ~ \frac{dy}{dt} ~ , ~ y ~ , ~ t ~ \right) ~ = ~ 0 \]
+
+\iec
+
+erfüllt.
+
+~\\
+
+\textit{(48)} hei{"s}t \underline{gew{"o}hnliche} DGL.
+
+~\\
+
+gewöhnlich: nur \underline{eine} Variable $t$.
+
+~\\
+
+$n$: ist die \underline{Ordnung} der DGL in \textit{(48)}.
+
+~\\
+
+Die DGL hei{"s}t \underline{homogen}, wenn mit $y(t)$ auch $\lambda ~ \cdot ~ y(t)$ mit beliebigem $\lambda \in \mathbb{C}$ eine Lösung von \textit{(48)} ist.
+
+~\\
+
+Eine lineare DGL enthält keine höheren Potenzen von $y$, $\frac{dy}{dt}$, als $1$.
+
+~\\
+~\\
+
+\[a_{n}(t) ~ \frac{d^{n} ~ y}{d ~ t^{n}} ~ + ~ ... ~ a_{2}(t) ~ \frac{d^2 ~ y}{d ~ t^2} ~ + ~ a_{1}(t) ~ \frac{dy}{dt} + a_{0}(t) ~ y ~ = ~ g(t) ~ \]
+
+\iec
+
+~\\
+
+mit vorgegebenen Funktionen $a_{k}(t) ~ ; ~ k=0,...,n,g(t)$\\
+Ist zusätzlich $g(t) ~ = ~ 0$, so ist die DGL \textit{(49)} auch homogen.
+
+~\\
+
+\underline{Beispiel:} \qquad $\dot{y} ~ = ~ \alpha ~ y, ~~ \alpha \in \mathbb{C}$
+
+\iec
+
+$\left[ \text{d.h.} ~ n=1, ~ a_{1}(t)=1, ~ a_{0}(t)=-\alpha, ~ g(t)=0 \right]$ ist eine homogene lineare DGL 1. Ordnung.
+
+~\\
+
+\underline{Lösung:}
+
+\begin{align*}
+	\int ~ \frac{\dot{y} ~ dt}{y} ~ &= ~ \alpha ~ \int ~ dt \\
+	ln ~ y ~ &= ~ \alpha ~ t ~ + ~ C' \\
+	y ~ &= ~ \underbrace{e^{C'}}_{=: ~ C} ~ e^{\alpha ~ t} \\
+	y ~ &= ~ C ~  e^{\alpha ~ t} ~ \text{mit} ~ C \in \mathbb{C}
+\end{align*}
+
+\iec
+
+% % Fehlt hier was ?????????????????????????????????????????????????
+
+~\\
+
+Schar von Lösungen, die von einem freien Parameter $C$ abhängt. Sind $a_{0}, ..., a_{n}$ unabhängig von der Zeit, so spricht man von einer DGL mit \underline{konstanten Koeffizienten}. Die Lösungsschar einer DGL n-ter Ordnung hat $n$ unabhängige Parameter $C_1,...,C_n$.
+
+~\\
+~\\
+
+Für eine lineare homogene DGL gilt das Superpositionsprinzip:
+
+~\\
+
+Mit $y_1(t)$ und $y_t(t)$ ist auch
+
+~\\
+
+\[ ~ \lambda ~ y_1(t) ~ + ~ \mu ~ y_2(t) \]
+
+eine Lösung (Beweis: Einsetzen in \textit{(49)}). Die \underline{Lösungsschar} hat die Form
+
+~\\
+
+\[C_1~ y_1(t) ~ + ~ ... ~ + ~ C_n ~ y_n(t) \]
+
+\iec
+
+wobei $y_1,...,y_n$ linear unabhängige Lösungen von \textit{(49)} sind.
+
+~\\
+~\\
+
+Schwingungsdifferentialgleichung:
+
+????????????????????????? (Bild einfügen)
+
+~\\
+~\\
+
+\[ F ~ = ~ -k ~ y \]
+
+\[m ~ \ddot{y} ~ = ~ -k ~ y \]
+
+\iec
+
+~\\
+
+\underline{Trick:} \qquad $m ~ \dot{y} ~ \ddot{y} ~ = ~ -k ~ \dot{y} ~ y ~~ \Leftrightarrow ~~ \frac{m}{2} ~ \underbrace{\frac{d}{dt} ~ \dot{y}^2}_{2 ~ \dot{y} ~ \frac{d}{dt} ~ \dot{y}} ~ = ~ -\frac{k}{2} ~ \frac{d}{dt} ~ y^2$
+
+\iec
+
+~\\
+
+\[ \frac{m}{2} ~ \dot{y}^2 ~ = ~ - \frac{k}{2} ~ y^2 ~ + ~ E \]
+
+(Die Integrationskonstante $E$ steht für Energie)
+
+~\\
+
+\[ ~ \frac{m}{2} ~ \frac{\dot{y}^2}{E ~ - ~ \frac{k}{2} ~ y^2} ~ = ~ 1 ~ \]
+
+~\\
+
+\[  ~ \underset{+}{-} \sqrt{\frac{m}{2E}} ~ \cdot ~ \int ~ dt ~ \frac{y}{\sqrt{1 ~ - ~ \frac{k}{2E} ~ y^2}} ~ = ~ \int ~ dt \qquad \text{Integral von \textit{(39)}} \]
+
+Substitution $dy ~ = ~ \dot{y} dt$
+
+\[ \underset{-}{+} ~ \sqrt{\frac{m}{2E} ~ \sqrt{\frac{2E}{k}}} ~ arcsin \left( \sqrt{\frac{k}{2E}} ~ y \right) ~ = ~ t ~ \underbrace{- ~ t_0}_{\text{Integrationskonstante 2}} \]
+
+\iec
+
+$| \cdot sin$
+
+\[ arcsin \left( \sqrt{\frac{k}{2E} ~ y} \right) ~ = ~ \omega \left( t ~ - ~ t_0 \right) ~ \text{mit} ~ \omega ~ = ~ \sqrt{\frac{k}{m}} ~ \qquad \text{Eigen(kreis)frequenz} \]
+
+$\sqrt{\frac{k}{2E} ~ y} = sin ~ \omega \left( t ~ - ~ t_0 \right) ~~ , ~~ \sqrt{\frac{k}{2E} ~ y} ~ = ~ A$
+
+\[ A ~ sin ~ \left[ \omega \left( t ~ - ~ t_0 \right) \right] \qquad \text{mit Amplitude $A ~ = ~ \sqrt{\frac{2E}{k}}$} \]
+
+\iec
+
+$E$ ist die \underline{Energie} der schwingenden masse, sie ist in \textit{(54)} als Konstante aufgetreten. $\Rightarrow$ Energieerhaltung!
+
+~\\
+
+Alternativ zu \textit{(56)}:
+
+\[ sin ~ \left[ \omega t ~ - ~ \omega t_0 \right] ~ = ~ cos ~ \omega t_0 ~ sin ~ \omega t ~ - ~ sin ~ \omega t_0 ~ cos ~ \omega t \]
+
+\[ \lambda ~ = ~ A ~ cos ~ \omega t_0 \]
+
+\[ \mu ~ = ~ -A ~ sin ~ \omega t_0 \]
+
+$\lambda, \mu$ sind linear unabhängig.
+
+\[ y(t) ~ = ~ \lambda ~ sin ~ \omega t ~ + ~ \mu ~ cos ~ \omega t \]
+
+\iec
+
+für $\lambda ~ = ~ \underset{+}{-} ~ i ~ \mu$ findet man die Lösungen:
+
+~\\
+
+\[ \mu ~ = ~ A_1 \qquad y_1 ~ = ~ A_1 ~ \left( cos ~ \omega t ~ + ~ i ~ sin ~ \omega t \right) ~ = ~ A_1 ~ e^{i ~ \omega t} \]
+
+\[ \mu ~ = ~ A_2 \qquad y_2 ~ = ~ A_2 ~ \left( cos ~ \omega t ~ - ~ i ~ sin ~ \omega t \right) ~ = ~ A_1 ~ e^{-i ~ \omega t} \]
+
+
+
+Die beiden Gleichungen tragen die Nummer:
+\iec
+
+~\\
+
+Eine (alternative) Standardmethode zur Lösung von \textit{(53)} ist die Verwendung des:
+
+~\\
+
+\underline{Ansatz:} \qquad $y ~ = ~ A ~ e^{i ~ \tilde{\omega} ~ t} $
+
+\iec
+
+~\\
+
+Einsetzen von \textit{(59)} in \textit{(53)}:
+
+\[ m ~ A \left( i ~ \tilde{\omega} \right) ~ e^{i ~ \tilde{\omega} ~ t} ~ = ~ -k ~ A ~ e^{i ~ \tilde{\omega} ~ t} \]
+
+\[ m ~ \tilde{\omega}^2 ~ = ~ k \]
+
+\[ \tilde{\omega} ~ = ~ \underset{-}{+} ~ \sqrt{\frac{k}{m}} ~ = ~ \underset{-}{+} ~ \omega \]
+
+\iec
+
+~\\
+
+\underline{Superpositionsprinzip:}
+
+~\\
+
+\[ y(t) ~ = ~ A_1 ~ e^{~ i ~ \omega ~ t} ~ + ~ A_2 ~ e^{~ -i ~ \omega ~ t} \]
+
+\iec
+
+mit ~ $\mu ~ = ~ A_1 ~ + ~ A_2$ ~ und ~ $\lambda ~ = ~ A_1 ~ - ~ A_2$ ~ finden wir \textit{(57)}.
+
+~\\
+~\\
+
+% TODO: Befehl für einfache Linie einsetzen! Standard/Paket?
+\begin{longtable}{p{\textwidth}}
+	\hline
+	~
+\end{longtable}
+
+~\\
+
+\underline{Zurück zu DGL 1. Ordnung:}
+
+~\\
+
+
+\begin{itemize}
+	\item DGL des Typs
+\end{itemize}
+	
+
+
+\[ \dot{y} ~ = ~ f(t) ~ g(y) \]
+
+\iec
+
+~\\ kann man durch \underline{Separation der Variablen} lösen:
+
+\[ \idt \frac{\dot{y}}{g(y)} ~~ = ~~ \idt ~ f(t) \]
+
+\[ G(y) ~~ := ~~ \int ~ \frac{dy}{g(y)} \]
+
+\[ y = G^-1 \left( \int ~ dt ~ f(t) \right) \]
+
+~\\ Notation enthält Integrationskonstante (Frage: Wo?).
+
+~\\
+~\\
+
+\begin{itemize}
+	\item Lineare DGL erster Ordnung
+\end{itemize}
+
+
+\[ \left( \text{~ mit ~} k(t) ~ = ~ \frac{a_0(t)}{a_1(t)} \text{~ s. \textit{(49)} ~} ; f(t) ~ = ~ \frac{g(t)}{a_1(t)} \right) \]
+
+~\\
+
+\[ \dot{y} ~ + ~ k(t) ~ y ~~ = ~~ f(t) \]
+
+\iec
+
+~\\
+
+Löst man so:
+
+~\\
+
+\[ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } ~ \left( \dot{y} ~ + ~ k(t) ~ y \right) ~~ = ~~ f(t) ~ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } \]
+
+\[ \ddt ~ \left( y ~ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } \right) ~~ = ~~ f(t) ~ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } \]
+
+\[ y ~ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } ~~ = ~~ \idt ~ f(t) e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } \]
+
+\[ y(t) ~~ = ~~ e^{~ - ~ \int_{t_0}^{t} ~ dt' ~ k(t') } ~ \idt ~ f(t) ~ e^{~ \int_{t_0}^{t} ~ dt' ~ k(t') } \]
+
+\iec
+
+~\\
+
+Diese Lösung hat \underline{eine} Integrationskonstante (aus $\idt ~ f(t) ...$), in die $t_0$-Abhängigkeit absorbiert werden kann. (Frage: Was heißt das? Ein neues Beispiel bitte.)
+
+
+
+
+\end{flushleft}
+
+
+
+
+
+%Hallo,
+%
+%beim Wiederholen von Folgen und Reihen gibt mir gerade eine altbekannte Aufgabe oder besser gesagt eine Lösung derselben zu denken. Es geht um einen Beweis, dass die harmonische Reihe divergiert.
+%
+%Von Aufgabe 1.1.3 aus W. Nolting, Grundkurs Theoretische Physik 1. Lösungsvorschläge sind im Buch. In diesem Fall:
+%
+%
+%<math>
+%
+%\begin{description}
+%	
+%	\item[(1)]
+%	$S_{2n} - S_{n} = \sum_{k = n + 1}^{2n} \frac{1}{k} \geq \sum_{k = n + 1}^{2n} \frac{1}{2n} = n \frac{1}{2n} = \frac{1}{2}$
+%	
+%	\item[(2)]
+%	$\text{(1)} \Rightarrow \underset{n \rightarrow \infty}{\lim} (S_{2n} - S_{n}) \geq \frac{1}{2}$
+%	
+%\end{description}
+%
+%</math>
+%
+%Aus (2) wird bereits die Divergenz der harmonischen Reihe gefolgert.
+%Mir ist klar, dass die harmonische Reihe divergiert. In dem Buch wurden bis jetzt keine Konvergenzkriterien eingeführt, daher nehme ich an, die Erwartung ist die, den Beweis mit Aussagen über die Unbeschränktheit der/einer Folge der Partialsummen zu führen. Trotzdem sehe ich gerade nicht warum (2) bereits das Ende des Beweises sein soll. Mir ist das etwas zu kurz. 
+
+

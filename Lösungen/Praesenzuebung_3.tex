@@ -1,0 +1,129 @@
+% !TeX encoding = UTF-8
+
+
+\chapter*{Präsenzübung 3}
+\addcontentsline{toc}{chapter}{3}
+
+
+~\\
+
+
+\section*{Aufgabe 1}
+
+
+~\\
+
+
+\subsection*{1, a)}
+\addcontentsline{toc}{section}{1, a)}
+
+~\\
+
+\[ \tcbhighmath[boxrule=2pt]{ \int_{x_0}^{x_1} ~ dt ~ \frac{\dot{y}}{y} ~~ = ~~ ln ~ \left| ~ y(x_1) ~ \right| ~ - ~ ln ~ \left| ~ y(x_0) ~ \right| } \]
+
+~\\
+
+
+\begin{minipage}{0pt}
+	\begin{flalign*}
+	%
+	\quad \qquad & & \dot{v} ~~ &= ~~ -f(t) ~ v \\ \\
+	%
+	\im \qquad & & \frac{\dot{v}}{v} ~~ &= ~~ -f(t) \\ \\
+	%
+	\im \qquad & & \int_{0}^{t} ~ dt ~ \frac{\dot{v}}{v} ~~ &= ~~ \underbrace{ -\int_{0}^{t} ~ dt ~ f(t) }_{=: ~ -F(t)} \\ \\
+	%
+	\im \qquad & & ln ~ \left| ~ v(t) ~ \right| ~ - ~ ln ~ \left| ~ v(0) ~ \right| ~~ &= ~~ -F(t) \\ \\
+	%
+	\im \qquad & & ln ~ \left| ~ \frac{v(t)}{v(0)} ~ \right| ~~ &= ~~ -F(t) \\ \\
+	%
+	\end{flalign*}
+\end{minipage}
+
+\begin{minipage}{0pt}
+	\begin{flalign*}
+	%
+	\im \qquad & & e^{ ~ ln ~ \left| ~ \frac{v(t)}{v(0)} ~ \right|} ~~ &= ~~ e^{ ~ -F(t)} \\ \\
+	%
+	\im \qquad & & \left| ~ \frac{v(t)}{v(0)} ~ \right| ~~ &= ~~ e^{ ~ -F(t)} \\ \\
+	%
+	\im \qquad & & \frac{v(t)}{v(0)} ~~ &= ~~ \pm ~ e^{ ~ -F(t)} \\ \\
+	%
+	\im \qquad & & v(t) ~~ &= ~~ \pm ~ e^{ ~ -F(t)} ~ v(0) \\ \\
+	%
+	\im \qquad & & v(t) ~ - ~ v(0) ~~ &= ~~ \pm ~ e^{ ~ -F(t)} ~ v(0) ~ - ~ v(0) \\ \\
+	%
+	\im \qquad & & v(t) ~ - ~ v(0) ~~ &= ~~ \pm ~ \left( ~ e^{ ~ -F(t)} ~ - ~ 1 ~ \right) ~ C_1 \qquad, ~~ C_1 ~ := ~ v(0) ~ \in ~ \mathbb{K}
+	%
+	\end{flalign*}
+\end{minipage}
+
+~\\
+~\\
+
+\subsection*{1, b)}
+\addcontentsline{toc}{section}{1, b)}
+
+~\\
+
+\setcounter{tc}{0}
+
+\begin{minipage}{0pt}
+	\begin{flalign*}
+	%
+	\quad \qquad & & {\begin{cases} ~ f(t) ~ = ~ \alpha ~ \end{cases}} : \qquad v(t) ~ - ~ v(0) ~~ &= ~~ \pm ~ \left( ~ e^{ ~ -\int_{0}^{t} ~ dt ~ \alpha } ~ - ~ 1 ~ \right) ~ C_1 \\ \\
+	%
+	\im \quad \qquad & & v(t) ~ - ~ v(0) ~~ &= ~~ \pm ~ \left( ~ e^{ ~ -\alpha ~ \left[ t \right]_{0}^{t} } ~ - ~ 1 ~ \right) ~ C_1 \\ \\
+	%
+	\im \quad \qquad & & v(t) ~ - ~ v(0) ~~ &= ~~ \pm ~ \left( ~ e^{ ~ -\alpha ~ t} ~ - ~ 1 ~ \right) ~ C_1 \\ \\
+	%
+	\im \quad \qquad & & v(t) ~~ &= ~~ C_2 \qquad, ~~ C_2 ~ \in ~ \mathbb{K}
+	%
+	\end{flalign*}
+\end{minipage}
+
+
+%~\\
+%~\\
+
+\newpage
+
+
+\subsection*{1, c)}
+\addcontentsline{toc}{section}{1, c)}
+
+~\\
+
+Gegeben ist eine gewöhnliche, nicht-lineare, homogene DGL, von erster Ordnung mit konstanten Koeffizienten in expliziter Form.
+
+~\\
+
+\setcounter{tc}{0}
+
+\begin{minipage}{0pt}
+	\begin{flalign*}
+	%
+	\quad \qquad & & \dydx ~~ &= ~~ a ~ y^2 ~ + ~ b ~ y \\ \\
+	%
+	\im \quad \qquad & & \dydx ~ \frac{1}{a ~ y^2 ~ + ~ b ~ y} ~~ &= ~~ 1 \\ \\
+	%
+	\end{flalign*}
+\end{minipage}
+
+~\\
+
+\begin{minipage}{0pt}
+	\begin{flalign*}
+	\end{flalign*}
+\end{minipage}
+
+
+
+
+
+
+
+\newpage
+
+
+%\section{~}

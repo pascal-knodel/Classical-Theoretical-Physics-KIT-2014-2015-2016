@@ -1,0 +1,233 @@
+% !TeX encoding = UTF-8
+
+
+
+\section{Bewegung eines Massenpunktes}
+
+\begin{flushleft}
+
+~\\ 
+
+% provisorisch
+%\newcommand{\harp}{\rightarrow}
+%\newcommand{cmd}{def}
+
+\underline{Idealisierung:} Ausdehnung des bewegten Körpers wird vernachlässigt (Massenpunkt).
+
+~\\
+
+\underline{Ortsvektor $\vec{r} ~ = ~ \left(\begin{array}{c}x\\ y\\ z\end{array}\right)$}
+
+~\\
+
+
+Koordinatensystem mit rechtwinkligen Achsen heißt karthesisches Koordinatensystem, mit karthesischen Koordinaten $\vec{r} ~ = ~ \left(\begin{array}{c}x\\ y\\ z\end{array}\right) ~ = ~ \left(\begin{array}{c}x_1\\ x_2\\ x_3\end{array}\right)$
+
+\iec
+
+~\\
+
+(TODO: hier fehlt ein Bild des Koordinatensystems, noch kurz aus gnuplot importieren)
+
+~\\
+% Symbol aus unicode-math für den Ursprung: \upvartheta
+
+Darstellung des Ortsvektors: Pfeil von $\theta$ zum Ort $\left(\begin{array}{c}x\\ y\\ z\end{array}\right)$ des Massenpunkts
+
+~\\
+
+(TODO: LaTeX horizontale Punkte)
+n-Tupel: $\left(\begin{array}{c}x_1\\ \dots\\ x_n\end{array}\right)$ \qquad $n$ Zahlen, es kommt auf die Reihenfolge an! Die Menge der $\{\begin{array}{c}reellen\\ komplexen\end{array}\}$ $n$-Tupel $\{ \begin{array}{c}\mathbb{R}^n\\ \mathbb{C}^n\end{array} \}$. D.h. ~ $\vec{r} ~ \in ~ \mathbb{R}^3$ ~, $\vec{r} ~ = ~ \left(\begin{array}{c}x\\ y\\ z\end{array}\right)$ ~ ist ein Spaltenvektor.
+
+~\\
+
+Transposition ~ $\vec{r}^T ~ = ~ (x, y, z)^T$ ~ ist ein Zeilenvektor. $\mathbb{R}^n$, $\mathbb{C}^n$ ~ sind \underline{Euklidische Vektorräume}.
+
+~\\
+
+$\vec{a}, \vec{b} ~ \in ~ \mathbb{R}^n, \mathbb{C}^n$ 
+
+~\\
+
+$\underbrace{\lambda ~ \vec{a} ~ + ~ \mu ~ \vec{b}}_{Linearkombination(en)} ~ \in ~ \mathbb{R}^n, \mathbb{C}^n$ ~ für beliebige $\lambda, \mu ~ \in \mathbb{R, C}$ \\
+
+~\\
+
+Wobei mit $\vec{a} ~ = ~ \left( \begin{array}{c}a_1\\ a_2\\ a_3\end{array} \right) $ ~ und ~ $\vec{b} ~ = ~ \left( \begin{array}{c}b_1\\ b_2\\ b_3\end{array} \right) $ ~ gilt: ~ $\lambda ~ \vec{a} ~ + ~ \mu ~ \vec{b} ~~ = ~~ \left( \begin{array}{c}\lambda ~ a_1 ~ + ~ \mu ~ b_1\\ \lambda ~ a_2 ~ + ~ \mu ~ b_2\\ \lambda ~ a_3 ~ + ~ \mu ~ b_3\end{array} \right) $
+
+~\\
+
+(Todo: Bild, wie Vektoren grafisch als Pfeile dargestellt werden und wie sich die hier zuletzt genannte Operation grafisch veranschaulichen lässt)
+
+~\\
+
+\begin{itemize}
+	
+	\item \underline{Skalarprodukt für $\mathbb{R}^n$}: \hfill \break
+	
+	$\vec{a} ~ \cdot_{neu} ~ \vec{b} ~ := ~ \vec{a}^T ~ \vec{b} ~ := \sum_{j ~ = ~ 1}^{n} ~ a_j ~ b_j $
+	
+	\iec
+	
+	~\\
+	
+	\item \underline{Länge} oder \underline{Norm}: \hfill \break
+	
+	$ \left| \vec{a} \right| ~ := ~ \sqrt{\vec{a}^2} ~ = ~ \sqrt{\vec{a}^T ~ \vec{a}} ~ = ~ \sqrt{ \sum_{j ~ = ~ 1}^{n} ~ \left| a_j \right|^2 } $
+	
+	\iec
+	
+	~\\
+	
+	\item Winkel ~ $\Theta\left(\vec{a}, ~ \vec{b} \right)$ ~ zwischen ~ $\vec{a}$ ~ und ~ $\vec{b}$ \hfill \break
+	
+	$\vec{a} ~ \vec{b} ~ =: ~ \left| \vec{a} \right| ~ \left| \vec{b} \right| ~ cos ~ \Theta \left(\vec{a}, ~ \vec{b} \right)$ ~ mit ~ $0 ~ \leq ~ \Theta ~ \leq ~ \pi$
+	
+	\iec
+	
+	~\\
+	
+	(TODO: Hier Zeichnung dazu einfügen)
+	
+	
+	
+\end{itemize}
+
+
+~\\
+
+\paragraph*{Bahnkurve}
+
+(TODO: Skizze einfügen)
+
+~\\
+
+\[ \vec{r}(t) ~ = ~ \left( \begin{array}{c}x(t)\ y(t)\\ z(t)\end{array} \right) \]
+
+~\\
+~\\
+
+\underline{Bsp:} \qquad Wurfparabel
+
+~\\
+
+\[ \vec{r}(t) ~ = ~ \left( \begin{array}{c}v_x ~ t\ 0\\ -g ~ \frac{t^2}{2}\end{array} \right) \]
+
+~\\
+
+(TODO: Skizze einfügen)
+
+~\\
+
+Geschwindigkeitsvektor ~ $\vec{v} ~ = ~ \dot{\vec{r}} ~ = ~ \limz{\triangle t} ~ \frac{\vec{r} (t ~ + ~ \triangle t) ~ - ~ \vec{r}(t)}{\triangle t}$
+
+\iec
+
+Limes komponentenweise definiert \underline{Weglänge} oder \underline{Bogenlänge}:
+
+~\\
+
+\[ \underbrace{ s(T, T_0) }_{\text{Kilometerzähler}} ~ = ~ \int_{T_0}^{T} ~ dt ~ \underbrace{ \left| \dot{ \vec{r} }(t) \right| }_{Tachoanzeige} \]
+
+\iec
+
+Umkehrfunktion ~ $t(s)$ ~ zu ~ $s(t, ~ t_0)$ ~ $\vec{r}_{s} (s) ~ := ~ \vec{r}( ~ t(s) ~ ) $ ~ ist eine andere Parameterdarstellung der Bahnkurve.
+
+~\\
+
+\underline{Tangentenvektor:}
+
+~\\
+
+\[ \vec{t} (s) ~ := ~ \frac{ d ~ \vec{r}_s }{ds} ~ = ~ \frac{d ~ \vec{r}}{dt} ~ \frac{dt}{ds} ~ = ~ \frac{\vec{t}}{\left| \vec{v} (t) \right|} ~ = ~ \frac{ \vec{v} }{ v(t) } \]
+
+\iec
+
+~\\
+
+D.h. ~ $ \left| \vec{t} (s) \right| ~ = ~ 1 $ ~ und ~ $\vec{r}_s ~ \propto ~ \vec{v} $
+
+~\\
+($\propto$ hei{"s}t \textit{zeigen in die gleiche Richtung})
+
+~\\
+
+\[ \vec{v}_{s} (s) ~ := ~ \vec{v} ( ~ t(s) ~ ) ~ = ~ \frac{d ~ \vec{t}_s }{ds} ~ \dsdt ~ = ~ \vec{t} (s) ~ v(t) \]
+
+\textbf{\iec}
+
+~\\
+
+Beschleunigung:
+
+\[ \vec{a} (t) ~ = ~ \dot{\vec{v}} (t) ~ = ~ \ddot{\vec{r}} (t) \]
+
+\iec
+
+\[ \vec{a} (t) ~ := ~ \dot{\vec{v}} ~ = ~ \ddt ~ \left| \vec{v} (t) \right| ~ = ~ \frac{ ~ v_x ~ \dot{v}_x ~ + ~ v_y ~ \dot{v}_y ~ ~ + ~ v_z ~ \dot{v}_z ~ }{ \sqrt{ v_{x}^{2}  ~ + ~ v_{y}^{2} ~ + ~ v_{z}^{2} } } ~ = ~ \frac{\vec{v} ~ \vec{a}}{v} \]
+
+\iec
+
+~\\
+
+\textbf{Achtung!} \qquad $ a(t) ~ \neq ~ \left| \vec{a} (t) \right| $ ~ \textbf{!}
+~\\
+Gibt manchmal (in Kurven) nicht nur Beschleunigung in Fahrtrichtung!
+
+~\\
+
+$\vec{a}$ als Funktion der Bogenlänge:
+
+~\\
+
+\[ \vec{a}_s (s) ~ := ~ \frac{d ~ \vec{v}_s ~ (~ s(t) ~)}{ dt } \]
+
+~\\
+
+\begin{align*}
+	\text{ \textit{(72)} } ~~ &= ~~ \ddt ~ \left[ \vec{t} (s) ~ \vec{v} (t) \right] \\ \\
+	&= ~~ \dot{\vec{t}} ~ v(t) ~ + ~ \vec{t} ~ a(t)
+\end{align*}
+
+\iec
+
+~\\
+
+Wegen \begin{align*}
+	1 ~~ &= ~~ \left| \vec{t} \right| ~~ = ~~ \vec{t} ~ \vec{t} \\
+	0 ~~ &= ~~ \ddt ~ \left( ~ \vec{t} ~ \vec{t} ~ \right) ~~ = ~~ 2 ~ \vec{t} ~ \vec{t}
+\end{align*} ,
+
+\iec
+
+denn es gilt die Produktregel: 
+
+~\\
+
+\begin{align*}
+	\ddt ~ \left( \vec{a} ~ \vec{b} \right) ~~ &= ~~ \ddt ~ \left( a_1 ~ b_1 ~ + ~ a_2 ~ b_2 ~ + ~ a_3 ~ b_3 \right) \\
+	&= ~~ \dot{a}_1 ~ b_1 ~ + ~ a_1 ~ \dot{b}_1 ~ + ~ \dot{a}_2 ~ b_2 ~ + ~ a_2 ~ \dot{b}_2 ~ + ~ \dot{a}_3 ~ b_3 ~ + ~ a_3 ~ \dot{b}_3
+	&= ~~ \dot{\vec{a}} ~ \vec{b} ~ + ~ \vec{a} ~ \dot{\vec{b}}
+\end{align*}
+
+\iec
+
+~\\
+
+\textit{(76)} bedeutet, dass ~ $\dot{\vec{t}}$ ~ auf ~ $\vec{t}$ ~ senkrecht steht. \\
+$ \Rightarrow ~ \left| \vec{a} \right|^2 ~ \overset{\textit{(75)}}{=} ~ \left|  \right| ~ v^2 ~ + ~ a^2 $
+
+\iec
+
+~\\
+
+\begin{align*}
+	\left| \vec{a} \right|^2 ~~ &= ~~ \vec{a} ~ \vec{a} ~~ = ~~ \left( \dot{\vec{t}} ~ v ~ + ~ \vec{t} ~ a \right) ~ \left( \dot{\vec{t}} ~ v ~ + ~ \vec{t} ~ a \right) \\ \\
+	&= ~~ \vec{t} ~ \vec{t} ~ v^2 ~ + ~ 2 ~ \underbrace{\dot{\vec{t}} ~ \vec{t} ~ v}_{= ~ 0} ~ a ~ + ~ \underbrace{\left| ~ \vec{t} ~ \right|^2}_{= ~ 1} ~ a^2
+\end{align*}
+
+
+
+
+
+\end{flushleft}

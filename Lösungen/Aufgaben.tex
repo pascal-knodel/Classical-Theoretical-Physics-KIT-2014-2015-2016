@@ -1,0 +1,176 @@
+% !TeX encoding = UTF-8
+\documentclass[
+% pointednumbers
+]{scrreprt}
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[explicit]{titlesec}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{tabularx}
+\usepackage{color}
+%\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathtools}
+%\usepackage{empheq}
+\usepackage[skins,theorems]{tcolorbox}
+\tcbset{highlight math style={enhanced,
+		colframe=black,colback=white,arc=0pt,boxrule=1pt}}
+\usepackage{cancel}
+
+%\mathindent=0pt
+
+\makeatletter
+\newcommand{\oset}[3][0ex]{%
+	\mathrel{\mathop{#3}\limits^{
+			\vbox to#1{\kern-2\ex@
+				\hbox{$\scriptstyle#2$}\vss}}}}
+\makeatother
+
+\makeatletter
+\newcommand{\uset}[3][0ex]{%
+	\mathrel{\mathop{#3}\limits^{
+			\vbox to#1{\kern+14\ex@
+				\hbox{$\scriptstyle#2$}\vss}}}}
+\makeatother
+
+
+
+\parindent0pt 
+
+%\newcommand*\Chaptername{Übungsblatt}
+%\newcommand*\Sectionname{Aufgabe}
+
+%\renewcommand{\cftchapaftersnum}{~}
+%\renewcommand\cftchapafterpnum{\vskip10pt}
+
+%\renewcommand{\cftsecaftersnum}{.~\Sectionname:~}
+
+%\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{20pt}{\LARGE}
+%\titleformat{\section}{\normalfont\large}{\Sectionname~\thesection~}{0pt}{#1}
+
+
+
+% Eigene Befehele:
+
+\newcommand{\ddx}{\frac{d}{dx}}
+\newcommand{\ddy}{\frac{d}{dy}}
+\newcommand{\ddz}{\frac{d}{dz}}
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\dfdx}{\frac{df}{dx}}
+\newcommand{\dydx}{\frac{dy}{dx}}
+\newcommand{\dudx}{\frac{du}{dx}}
+\newcommand{\dFdx}{\frac{dF}{dx}}
+\newcommand{\dudxdx}{\frac{du}{dx} ~ dx}
+\newcommand{\limz}{\underset{x ~ \rightarrow ~ 0}{lim}}
+\newcommand{\limi}{\underset{x ~ \rightarrow ~ \infty}{lim}}
+%\newcommand{\ie}{\overset{\text{(#1)}}{=}}[1]
+%\newcommand{\ei}[1]{\textbf{(#1)}}
+\newcommand{\mdq}[1]{``#1"}
+\newcommand{\idx}{\int ~ dx}
+\newcommand{\idy}{\int ~ dy}
+\newcommand{\idu}{\int ~ du}
+\newcommand{\idt}{\int ~ dt}
+\newcommand{\dd}[1]{\frac{d}{d ~ #1}}
+
+\newcommand{\px}{\frac{\partial}{\partial ~ x}}
+\newcommand{\py}{\frac{\partial}{\partial ~ y}}
+\newcommand{\pz}{\frac{\partial}{\partial ~ z}}
+
+\def\mathLarge#1{\mbox{\LARGE $#1$}}
+
+
+
+\hypersetup{colorlinks,linkcolor=black,urlcolor=blue}
+%% or
+% \hypersetup{colorlinks=false,pdfborder=000}
+
+% hack into hyperref
+\makeatletter
+\DeclareUrlCommand\ULurl@@{%
+	\def\UrlFont{\ttfamily\color{blue}}%
+	\def\UrlLeft{\uline\bgroup}%
+	\def\UrlRight{\egroup}}
+\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
+\makeatother
+
+
+
+% Used to set and reset temporarily
+\newcounter{tc}
+\newcommand{\itc}{\addtocounter{tc}{1}\textbf{\arabic{tc}}}
+
+\newcounter{tct}
+\newcommand{\itct}{\addtocounter{tct}{1}\textbf{\arabic{tct}}}
+
+
+% Display implication (logical) with number on top, its value is ts's.
+\newcommand{\im}{\addtocounter{tc}{1}\oset[1.5ex]{\arabic{tc}}{\Rightarrow}}
+% Display equiv (logical) with number on top, its value is ts's.
+\newcommand{\eqv}{\addtocounter{tc}{1}\oset[1.5ex]{\arabic{tc}}{\Leftrightarrow}}
+% 
+\newcommand{\eqs}{\addtocounter{tc}{1}\oset[1.5ex]{\arabic{tc}}{=}}
+
+\newcommand{\qma}[1]{\oset[1.5ex]{?}{#1}}
+
+
+\newcommand{\imt}{\addtocounter{tct}{1}\oset[1.5ex]{\arabic{tc}.\arabic{tct}}{\Rightarrow}}
+
+\newcommand{\eqst}{\addtocounter{tct}{1}\oset[1.5ex]{\arabic{tc}.\arabic{tct}}{=}}
+
+
+
+\begin{document}
+
+
+\input{Titel}
+
+
+\tableofcontents
+
+\newpage
+
+Hinweis: \\~\\ Viele der hier ausgeführten Zwischenschritte sind nicht für die Praxis (schriftliche Prüfung) geeignet.
+
+\newpage
+
+\chapter*{Übungsaufgaben}
+\addcontentsline{toc}{chapter}{Übungsaufgaben}
+
+\input{Aufgabe_1}
+\input{Aufgabe_2}
+\input{Aufgabe_3}
+\input{Aufgabe_4}
+%\input{Aufgabe_5}
+%\input{Aufgabe_6}
+%\input{Aufgabe_7}
+%\input{Aufgabe_8}
+%\input{Aufgabe_9}
+
+\newpage
+
+\setcounter{chapter}{0}
+
+\chapter*{Präsenzübungen}
+\addcontentsline{toc}{chapter}{Präsenzübungen}
+
+\input{Praesenzuebung_1}
+\input{Praesenzuebung_2}
+\input{Praesenzuebung_3}
+\input{Praesenzuebung_4}
+
+% Tipps: In Klausur nur Folgepfeile, wenn nicht anders verlangt.
+% Durchstreichen und noch einen Umformungsschritt einkritzeln ist in derselben Zeile
+% oft schneller, als das Ganze nochmal neu zu schreiben (in einer neuen Zeile). Spart Klausur-Zeit!
+	
+\end{document}
